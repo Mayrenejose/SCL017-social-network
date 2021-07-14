@@ -1,0 +1,114 @@
+body{
+    background-color:#C3DBD5;
+    z-index: 1;
+}
+.containerGeneral{
+    width: 100%;
+    height: 1000px;
+}
+
+.containerIconGift {
+    background-color: #9CB795;
+    width: 92%;
+    height: 27%;
+    margin-top: 37%;
+    margin-left: 4%;
+    z-index: 2;
+}
+
+.imgGift {
+    width: 39%;
+    height: 99%;
+    margin-left: 57%;
+}
+
+.containerLogin {
+    background: rgba(117, 111, 129, 0.74);
+    width: 40%;
+    z-index: 3;
+    margin-top: -54%;
+    margin-left: 9%;
+    height: 50%;
+    
+}
+
+.containerBoxGreen {
+    width: 24%;
+    height: 14%;
+    background-color: transparent;
+    margin-top: -1%;
+    margin-left: 36%;
+}
+.boxGreen{
+    width: 100%;
+    height: 100%;
+
+}
+
+.IngFacebook{
+    width: 20%;
+    height: 20%;
+    background-color: transparent;
+}
+
+.iconFacebook{
+    width: 20%;
+    height: 20%;
+}
+
+.IngGoogle{
+    width: 20%;
+    height: 20%;
+    background-color: transparent;
+}
+
+.iconGoogle{
+    width: 20%;
+    height: 20%;
+}
+
+.ingresa {
+    height: 12%;
+    width: 35%;
+    margin-left: 3%;
+    margin-top: 6%;
+}
+
+.Registro {
+    height: 12%;
+    width: 35%;
+    margin-left: 13%;
+}
+input {
+    width: 93%;
+    height: 5%;
+    background-color: rgb(246 246 246);
+    font-family: 'Solway', serif;
+    margin-left: 2%;
+    margin-top: 10%;
+}
+button{
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+    font-family: 'Solway', serif, #fff;
+
+}
+
+header{
+    font-family: 'Sofia', cursive;
+}
+
+h1 {
+    font-family: 'Sofia', cursive;
+    font-size: 40px;
+    margin-left: 31%;
+    color: white;
+}
+
+.slogan {
+    font-family: 'Solway', serif;
+    margin-top: -8%;
+    font-size: 111%;
+    margin-left: 13%;
+}

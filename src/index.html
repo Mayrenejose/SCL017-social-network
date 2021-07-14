@@ -5,17 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.7.0/firebase-app.js"></script>
+  <div class ="hola" id="root"></div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.7.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD52Kq2fVh9kqxYv1VGJVngp46GPtDTU3g",
+    authDomain: "social-network-b937b.firebaseapp.com",
+    databaseURL: "https://social-network-b937b-default-rtdb.firebaseio.com",
+    projectId: "social-network-b937b",
+    storageBucket: "social-network-b937b.appspot.com",
+    messagingSenderId: "652017711204",
+    appId: "1:652017711204:web:8b43c39dd313664c880771",
+    measurementId: "G-1XDNB1C1B6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</script>
+
+<div class="contenedorgeneral" id="contenedor">
+  <div id="container"></div>
+</div>
+  
 
   <script type="module" src="main.js"></script>
 </body>

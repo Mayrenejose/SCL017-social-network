@@ -1,5 +1,11 @@
 // Este es el punto de entrada de tu aplicacion
 
-import { myFunction } from './lib/index.js';
+import { home } from './lib/view/TemplateHome.js';
 
-myFunction();
+home()
+
+const init = () =>{
+  document.getElementById('root').appendChild(home());
+
+};
+window.addEventListener('load',init);
