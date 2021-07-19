@@ -1,5 +1,5 @@
-export const home = () =>{
-    const divHome = document.createElement('div');
+export const home = () => {
+    //const divHome = document.createElement('div');
     const viewHome = `
     <div class="containerGeneral">
     <div class="containerIconGift">
@@ -39,8 +39,14 @@ export const home = () =>{
 
       
     </div>
-  </div>`;
-  divHome.innerHTML = viewHome;
- return divHome;
+    
+  </div>`
+  
+  //divHome.innerHTML = viewHome;
+ return viewHome;
 
 };
+
+
+
+
