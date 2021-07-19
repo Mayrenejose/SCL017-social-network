@@ -19,8 +19,8 @@ export const home = () => {
           <a href="#/Registrate" Regístrate> 
             <button id="Registrate" class="Registro"> Regístrate</button>
           </a>
-          <a href="#/Ingresa" Ingresa> 
-            <button id="Ingresar" class="ingresa"> Ingresa </button>
+          <a href="#/ingresar" Ingresa> 
+            <button id="ingresar" class="ingresa"> Ingresa </button>
           </a>
           <a href="#/facebook" Facebook> 
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
