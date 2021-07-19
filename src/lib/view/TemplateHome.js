@@ -1,5 +1,3 @@
-
-
 export const home = () => {
   const divHome = document.createElement('div');
   const viewHome = `
@@ -75,9 +73,4 @@ export const home = () => {
       document.querySelector('#email').value = '';
       document.querySelector('#password').value = '';
     }
-
-  })
-  return divHome;
-
-};
 

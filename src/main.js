@@ -1,5 +1,3 @@
-// Este es el punto de entrada de tu aplicacion
-
 import { home } from './lib/view/TemplateHome.js';
 import { changeRouter } from './lib/router.js';
 
@@ -33,4 +31,5 @@ setTimeout(() => {
 console.log('buttonGoogle: ', buttonGoogle)
 buttonGoogle.addEventListener("click", inicioSesionGoogle, false);
 }, 1000);
+
 
