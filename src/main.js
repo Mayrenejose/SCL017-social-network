@@ -1,23 +1,35 @@
-// Este es el punto de entrada de tu aplicacion
+import { home } from './lib/view/TemplateHome.js';
+import { changeRouter } from './lib/router.js';
 
-import { home } from './lib/view/templateHome.js';
+const init = () => {
+  document.getElementById('root').appendChild(home());     //antes de haber cambios en hash siempre tener el home
 
-import { myFunction} from './lib/index.js';
+  window.addEventListener('hashchange', () => {    //cuando cambie el hash ejecutame:
+    changeRouter(window.location.hash);
+  });
+};
 
-myFunction()
+window.addEventListener("load", init);
 
-document.getElementById("root").innerHTML = home();
+//var provider = new firebase.auth.GoogleAuthProvider();
 
-/*const facebookButton = document.querySelector('#facebook')
-facebookButton.addEventListener('click', e => {
-  e.preventDefault();
-  const provider = new firebase.auth.FacebookAuthProvider();
-  auth.signInWithPopup(provider)
-  .then(() => {
-    console.log(results);
-    console.log('facebook sign in')
-  })
-  .catch(err => {
-    console.log(err)
-  })
-})*/
+//const inicioSesionGoogle = () => {
+ // console.log("inicioSesionGoogle");
+  //return firebase
+    //.auth()
+    //.signInWithPopup(provider)
+    //.then((result) => {
+     // console.log(result);
+   // })
+    //.catch((error) => {
+     // console.log(error);
+   // });
+//};
+
+setTimeout(() => {
+  let buttonGoogle = document.getElementById("google");
+console.log('buttonGoogle: ', buttonGoogle)
+buttonGoogle.addEventListener("click", inicioSesionGoogle, false);
+}, 1000);
+
+
