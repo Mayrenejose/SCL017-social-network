@@ -13,20 +13,20 @@ const init = () => {
 
 window.addEventListener("load", init);
 
-var provider = new firebase.auth.GoogleAuthProvider();
+//var provider = new firebase.auth.GoogleAuthProvider();
 
-const inicioSesionGoogle = () => {
-  console.log("inicioSesionGoogle");
-  return firebase
-    .auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      console.log(result);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};
+//const inicioSesionGoogle = () => {
+ // console.log("inicioSesionGoogle");
+  //return firebase
+    //.auth()
+    //.signInWithPopup(provider)
+    //.then((result) => {
+     // console.log(result);
+   // })
+    //.catch((error) => {
+     // console.log(error);
+   // });
+//};
 
 setTimeout(() => {
   let buttonGoogle = document.getElementById("google");
