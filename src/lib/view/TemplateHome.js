@@ -17,9 +17,9 @@ export const home = () => {
           <input id="email" spellcheck="false" placeholder="Ingrese E-mail" type="email" name="text">
           <input id="password" spellcheck="false" placeholder="Ingrese contraseña" type="password" name="text">
           <a href="#/Registrate" Regístrate> 
-            <button id="Registrate" class="Registro"> Regístrate</button>
+            <button id="registrate" class="Registro"> Regístrate</button>
           </a>
-          <a href="#/ingresar" Ingresa> 
+          <a href="#/ingresar" ingresar> 
             <button id="ingresar" class="ingresa"> Ingresa </button>
           </a>
           <a href="#/facebook" Facebook> 
@@ -75,9 +75,7 @@ export const home = () => {
       document.querySelector('#email').value = '';
       document.querySelector('#password').value = '';
     }
-
   })
-  return divHome;
+    return divHome;
 
-};
-
+  };

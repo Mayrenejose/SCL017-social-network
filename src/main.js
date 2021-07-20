@@ -1,5 +1,3 @@
-// Este es el punto de entrada de tu aplicacion
-
 import { home } from './lib/view/TemplateHome.js';
 import { changeRouter } from './lib/router.js';
 
@@ -16,16 +14,16 @@ window.addEventListener("load", init);
 //var provider = new firebase.auth.GoogleAuthProvider();
 
 //const inicioSesionGoogle = () => {
-  //console.log("inicioSesionGoogle");
+ // console.log("inicioSesionGoogle");
   //return firebase
     //.auth()
     //.signInWithPopup(provider)
     //.then((result) => {
-      //console.log(result);
-    //})
+     // console.log(result);
+   // })
     //.catch((error) => {
-      //console.log(error);
-    //});
+     // console.log(error);
+   // });
 //};
 
 //setTimeout(() => {
@@ -33,4 +31,5 @@ window.addEventListener("load", init);
 //console.log('buttonGoogle: ', buttonGoogle)
 //buttonGoogle.addEventListener("click", inicioSesionGoogle, false);
 //}, 1000);
+
 

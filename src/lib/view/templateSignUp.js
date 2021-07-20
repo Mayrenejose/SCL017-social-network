@@ -76,4 +76,5 @@ export const templateSignUp = () =>{
     }
   })
     return divSignUp;
+
 };
