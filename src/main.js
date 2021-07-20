@@ -1,7 +1,6 @@
 import { home } from './lib/view/TemplateHome.js';
 import { changeRouter } from './lib/router.js';
-import { myFunction} from './lib/index.js';
-import { facebookLogin } from './lib/facebookLogin.js';
+
 
 const init = () => {
   document.getElementById('root').appendChild(home());     //antes de haber cambios en hash siempre tener el home
@@ -12,28 +11,11 @@ const init = () => {
 
 window.addEventListener("load", init);
 
-//var provider = new firebase.auth.GoogleAuthProvider();
-
-//const inicioSesionGoogle = () => {
- // console.log("inicioSesionGoogle");
-  //return firebase
-    //.auth()
-    //.signInWithPopup(provider)
-    //.then((result) => {
-     // console.log(result);
-   // })
-    //.catch((error) => {
-     // console.log(error);
-   // });
-//};
-
-setTimeout(() => {
+/*setTimeout(() => {
   let buttonGoogle = document.getElementById("google");
 console.log('buttonGoogle: ', buttonGoogle)
 buttonGoogle.addEventListener("click", inicioSesionGoogle, false);
-}, 1000);
+}, 1000);*/
 
 
-const facebookButton = document.getElementById("facebook");
-facebookButton.addEventListener("click", facebookLogin);
 

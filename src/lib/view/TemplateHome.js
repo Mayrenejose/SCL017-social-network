@@ -1,3 +1,5 @@
+import { facebookLogin } from '../facebookLogin.js';
+import { inicioSesionGoogle } from '../googleLogin.js';
 export const home = () => {
   const divHome = document.createElement('div');
   const viewHome = `
@@ -32,8 +34,6 @@ export const home = () => {
     `;
   divHome.innerHTML = viewHome;
   
- 
-
     let email = divHome.querySelector('#email').value;
     let password = divHome.querySelector('#password').value;
 
@@ -69,8 +69,15 @@ export const home = () => {
     const cleanFormLogin = () => {
       document.querySelector('#email').value = '';
       document.querySelector('#password').value = '';
-    }
-      return viewHome;
+    };
+
+    const facebookButton = divHome.querySelector('#facebook');
+    facebookButton.addEventListener("click", facebookLogin);
+
+    const googleLogin = divHome.querySelector('#google');
+    googleLogin.addEventListener("click", inicioSesionGoogle);
+
+      return divHome;
     }
 
   
