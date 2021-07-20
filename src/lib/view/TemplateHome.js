@@ -23,9 +23,7 @@ export const home = () => {
       <a href="#/Ingresa" Ingresa> 
         <button id="Ingresar" class="ingresa"> Ingresa </button>
       </a>
-    </b>
-
-      
+    </b>      
 
       <a href="#/facebook" Facebook> 
         <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
@@ -42,6 +40,7 @@ export const home = () => {
     
   </div>`
   
+
   //divHome.innerHTML = viewHome;
  return viewHome;
 

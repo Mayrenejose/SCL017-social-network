@@ -1,3 +1,6 @@
+<details>
+<summary>Readme Laboratoria</summary>
+
 # Creando una Red Social
 
 ## Índice
@@ -324,3 +327,116 @@ Otras:
 * [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
 * [Mobile First - ZURB](https://zurb.com/word/mobile-first)
 * [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
+
+</details>
+
+<details>
+<summary>Readme SCL017</summary>
+
+## Introducción
+
+Ésta aplicación está destinada a personas que se vean en la necesidad de regalar y/o buscar artículos de diversa índole, sin un pago ni trueque de por medio, no sólo como una forma de ayuda social que debiera ser propia de toda comunidad, sino también como una manera de desarrollar cultura de la sustentabilidad. Es por eso que, como equipo, hemos decidido nombrarla "Eluney", palabra en mapudungún que significa "regalo caído del cielo", y que por lo tanto, no necesita retribución. 
+
+## Funcionalidad y diseño. 
+
+Nuestra aplicación fue pensada como una interfaz sencilla que mantenga la idea de la naturaleza y cooperación en sus colores e imágenes. La idea principal es que sea amigable, de manera que ingresar a ella pueda hacerse a través de las herramientas de uso común como lo son Facebook y Google. 
+En sus vistas se podrán encontrar dos secciones principales: una para postear el ofrecimiento de regalos, y otra para poder buscar según las necesidades de cada usuario y usuaria. En la primera sección podemos encontrar el acceso al perfil del usuario y las interacciones para regalar. En la segunda, se ven diversas categorías principales, como Vestuario y Accesorios, Tecnología, Mundo Bebé y Otros. 
+
+## Historias de Usuario
+
+H.U.1.- "Quiero  iniciar y cerrar sesion y crearme una cuenta en la aplicacion"
+
+Criterios de aceptación:
+
+- Iniciar sesion con google y facebook.
+- Crear cuenta en pocos pasos. 
+- Botones de Iniciar sesion, crear cuenta,facebook y google.
+
+Definición de terminado:
+
+Se realiza prototipo de baja fidelidad. En este se bocetea la estructura general de la aplicación.
+Se realiza el prototipo de alta fidelidad (en Figma). Este muestra más fielmente la apariencia “final” de la aplicación.
+
+H.U.2.-"Quiero tener la app en el móvil".
+
+Criterios de aceptación:
+
+- Aplicar responsive.
+
+Definición de terminado:
+
+- Trabajar con mobile first para adaptar nuestra app primero a mobile y luego a las demás pantallas.
+
+H.U.3.- "Quiero buscar regalos, y tambien hacer post para regalar".
+
+Criterios de aceptación:
+
+- Crear 2 categorías: buscar regalo y regalar. 
+- Crear barra de búsqueda. 
+- Postear mensajes.
+
+Definición de terminado:
+
+- Los post deben guardarse en la base de datos. 
+- La barra de busqueda debe estar conectada a la base de datos de firebase.
+
+H.U.4.-"Quiero acceder directamente a mis sitios favoritos dentro de la aplicacion".
+
+Criterios de aceptación:
+
+- Cada vista dentro de la aplicacion tendra un url distinto.
+
+Definición de terminado:
+
+- Creacion de carpeta router.js, asignar distintos hash a distintas views. 
+
+H.U.5.-"Quiero  tener un perfil en la aplicacion"
+
+Criterios de aceptación: 
+
+- Que exista una vista editable del perfil.
+
+Definición de terminado:
+
+- Creación de una vista de perfil que permita editar y guardar cambios. 
+
+H.U.6.- "Quiero darle like/me gusta a las publicaciones"
+
+Criterios de aceptación:
+
+- Es posible darle like a las aplicaciones. 
+
+Definición de terminado:
+
+- Los like/me gusta deben guardarse en la base de datos.
+
+H.U.7.- "Quiero agregar fotografias a mis publicaciones"
+
+Criterios de aceptación:
+-
+
+Definición de terminado:
+
+-
+
+## Prototipos. 
+
+La primera tarea fue identificar los elementos que debían estar presentes en nuestra aplicación, por lo tanto, las imagenes iniciales corresponden a la visualización de lo necesario para ser creado en HTML. Es nuestro prototipo de baja fidelidad. 
+
+![](src/Assets/1.jpeg)
+
+![](src/Assets/2.jpeg)
+
+![](src/Assets/3.jpeg)
+
+
+
+A continuación, le dimos colores suaves y una tipografía manuscrita, pero que fuese legible a la vez, a cada una de nuestras vistas. Corresponde a nuestro prototipo de alta fidelidad.
+
+/*Insertar imágenes*/
+
+
+
+
+
+</details>
