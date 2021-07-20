@@ -11,11 +11,6 @@ const init = () => {
 
 window.addEventListener("load", init);
 
-/*setTimeout(() => {
-  let buttonGoogle = document.getElementById("google");
-console.log('buttonGoogle: ', buttonGoogle)
-buttonGoogle.addEventListener("click", inicioSesionGoogle, false);
-}, 1000);*/
 
 
 
