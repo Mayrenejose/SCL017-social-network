@@ -1,5 +1,8 @@
+
 import { startSession } from '../loginEmail.js';
 import { observer } from '../observador.js';
+import { facebookLogin } from '../facebookLogin.js';
+import { inicioSesionGoogle } from '../googleLogin.js';
 
 export const home = () => {
   const divHome = document.createElement('div');
@@ -17,7 +20,6 @@ export const home = () => {
           </div>
           <input id="email" spellcheck="false" placeholder="Ingrese E-mail" type="email" name="text">
           <input id="password" spellcheck="false" placeholder="Ingrese contraseña" type="password" name="text">
-
           
             <button id="ingresar" class="ingresa"> Ingresar </button>
           
@@ -29,6 +31,8 @@ export const home = () => {
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
           <a href="#/muro"> 
+        
+          <a href="#/muro"> 
             <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
           </a> 
       </div>
@@ -36,6 +40,7 @@ export const home = () => {
     </div>
     `;
   divHome.innerHTML = viewHome;
+
 
   //Ingresar con usuario existente
   const login = divHome.querySelector('#ingresar');
@@ -48,6 +53,14 @@ export const home = () => {
      
     observer();
   })
-  return divHome;
+  
+    const facebookButton = divHome.querySelector('#facebook');
+    facebookButton.addEventListener("click", facebookLogin);
 
-};
+    const googleLogin = divHome.querySelector('#google');
+    googleLogin.addEventListener("click", inicioSesionGoogle);
+
+      return divHome;
+    
+};  
+

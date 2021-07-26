@@ -5,9 +5,8 @@
 //export const nameUser = () => firebase.auth().currentUser;
 
 //crear publicacion
-export const createPost = () => {
-    const db = firebase.firestore();
-    const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
+//export const createPost = () => {
+    /*const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
     let userPost = firebase.auth().currentUser;    //usuario que esta comentando
     console.log(userPost);
     let userName = userPost.displayName;
@@ -37,5 +36,5 @@ export const createPost = () => {
         .catch(() => {
             alert('error');
             console.error('error al guardar comentario');
-        });*/
-}
+        });
+}*/

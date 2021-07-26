@@ -1,4 +1,5 @@
 export const wall = e => {
+
     const wallHome = document.createElement('div');
     const viewWall = `
     <div class="header">
