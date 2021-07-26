@@ -132,6 +132,7 @@ h1 {
     .header {
       background-color: lightpink;
     }
+
     
     .postOne {
       background-color: lightgoldenrodyellow;
@@ -145,3 +146,4 @@ h1 {
       grid-row: 2/2;
     }
     
+
