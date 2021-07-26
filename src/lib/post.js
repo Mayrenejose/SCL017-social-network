@@ -5,8 +5,8 @@
 //export const nameUser = () => firebase.auth().currentUser;
 
 //crear publicacion
-export const createPost = () => {
-    const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
+//export const createPost = () => {
+    /*const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
     let userPost = firebase.auth().currentUser;    //usuario que esta comentando
     let userName = userPost.displayName;
     if (userPost === null) {                //si no encuentra el nombre de usuario usa el email
@@ -34,4 +34,4 @@ export const createPost = () => {
             alert('error');
             console.error('error al guardar comentario');
         });
-}
+}*/

@@ -1,4 +1,4 @@
-import {createPost} from '../post.js'
+//import {createPost} from '../post.js'
 
 
 export const templatePost = () =>{
