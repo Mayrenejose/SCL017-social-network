@@ -1,5 +1,5 @@
 import { templateSignUp } from './view/templateSignUp.js'// se importan todas las const para pintar en la interfaz
-import { home } from './view/TemplateHome.js';
+import { home } from './view/templateHome.js';
 
 export const changeRouter = (hash) => {     //exportar const que ira cambiando las rutas
     if (hash === '#/') {

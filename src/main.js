@@ -1,4 +1,4 @@
-import { home } from './lib/view/TemplateHome.js';
+import { home } from './lib/view/templateHome.js';
 import { changeRouter } from './lib/router.js';
 
 const init = () => {
