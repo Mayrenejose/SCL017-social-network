@@ -1,3 +1,5 @@
+import { facebookLogin } from '../facebookLogin.js';
+import { inicioSesionGoogle } from '../googleLogin.js';
 export const home = () => {
   const divHome = document.createElement('div');
   const viewHome = `
@@ -17,13 +19,13 @@ export const home = () => {
           <a href="#/Registrate" Regístrate> 
             <button id="registrate" class="Registro"> Regístrate</button>
           </a>
-          <a href="#/ingresar" ingresar> 
+          <a href="#/muro" ingresar> 
             <button id="ingresar" class="ingresa"> Ingresa </button>
           </a>
-          <a href="#/facebook" Facebook> 
+          <a href="#/muro" Facebook> 
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
-          <a href="#/google" Google> 
+          <a href="#/muro" Google> 
             <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
           </a> 
       </div>
@@ -31,12 +33,7 @@ export const home = () => {
     </div>
     `;
   divHome.innerHTML = viewHome;
-
-
-  const login = divHome.querySelector('#ingresar');
-  login.addEventListener('click', () => {
-
-
+  
     let email = divHome.querySelector('#email').value;
     let password = divHome.querySelector('#password').value;
 
@@ -66,11 +63,21 @@ export const home = () => {
             cleanFormLogin();
             break;
           }  
-        })
+        });
 
     //Limpia inputs cuando el login arroje error
     const cleanFormLogin = () => {
       document.querySelector('#email').value = '';
       document.querySelector('#password').value = '';
+    };
+
+    const facebookButton = divHome.querySelector('#facebook');
+    facebookButton.addEventListener("click", facebookLogin);
+
+    const googleLogin = divHome.querySelector('#google');
+    googleLogin.addEventListener("click", inicioSesionGoogle);
+
+      return divHome;
     }
 
+  
