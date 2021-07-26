@@ -121,3 +121,27 @@ h1 {
     font-size: 111%;
     margin-left: 13%;
 }
+
+.wallContainer {
+    background-color: skyblue;
+    display: grid;
+    grid-template-columns: 15% 30%  10% 30% 15%;
+    grid-template-rows: 50px 668px 50px;
+    }
+    
+    .header {
+      background-color: lightpink;
+    }
+    
+    .postOne {
+      background-color: lightgoldenrodyellow;
+      grid-column: 2/2;
+      grid-row: 2/2;
+    }
+    
+    .postTwo {
+      background-color: lightsalmon;
+      grid-column: 4/4;
+      grid-row: 2/2;
+    }
+    

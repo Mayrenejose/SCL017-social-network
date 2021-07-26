@@ -19,13 +19,13 @@ export const home = () => {
           <a href="#/Registrate" Regístrate> 
             <button id="registrate" class="Registro"> Regístrate</button>
           </a>
-          <a href="#/ingresar" ingresar> 
+          <a href="#/muro" ingresar> 
             <button id="ingresar" class="ingresa"> Ingresa </button>
           </a>
-          <a href="#/facebook" Facebook> 
+          <a href="#/muro" Facebook> 
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
-          <a href="#/google" Google> 
+          <a href="#/muro" Google> 
             <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
           </a> 
       </div>
