@@ -4,10 +4,11 @@ import { wall } from '../lib/view/templateWall.js';
 import { templatePost } from './view/templatePost.js'; 
 
 
+
 export const changeRouter = (hash) => {     //exportar const que ira cambiando las rutas
-    if (hash === '#/') {
+    if (hash === '#/') {        
         return templateView(hash)
-    } if (hash === '#/Registrate') {
+    }if (hash === '#/Registrate') {
         return templateView(hash)
     } if (hash === '#/muro') {
         return templateView(hash)
@@ -26,13 +27,15 @@ const templateView = (hash) => {  //const que va pintando interfaz dependiendo e
     switch (hash) {      //switch evalua los hash y presenta el correspondiente
 
         case '#/':
-            rootView.appendChild(home());
-            break;
+                rootView.appendChild(home());
+                break;
+
         case '#/Registrate':
             rootView.appendChild(templateSignUp());
             break;
         case '#/muro':
             rootView.appendChild(wall());
+
             break;
         case '#/post':
             rootView.appendChild(templatePost());
@@ -44,3 +47,4 @@ const templateView = (hash) => {  //const que va pintando interfaz dependiendo e
             rootView.innerHTML = `<p>Error</p>`;
     }
 };
+
