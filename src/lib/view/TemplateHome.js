@@ -1,4 +1,5 @@
-
+import { startSession } from '../loginEmail.js';
+import { observer } from '../observador.js';
 
 export const home = () => {
   const divHome = document.createElement('div');
@@ -16,16 +17,18 @@ export const home = () => {
           </div>
           <input id="email" spellcheck="false" placeholder="Ingrese E-mail" type="email" name="text">
           <input id="password" spellcheck="false" placeholder="Ingrese contraseña" type="password" name="text">
-          <a href="#/Registrate" Regístrate> 
-            <button id="registrate" class="Registro"> Regístrate</button>
+
+          
+            <button id="ingresar" class="ingresa"> Ingresar </button>
+          
+          <a href="#/Registrate"> 
+            <button id="registrate" class="Registro" > Regístrate</button>
           </a>
-          <a href="#/ingresar" ingresar> 
-            <button id="ingresar" class="ingresa"> Ingresa </button>
-          </a>
-          <a href="#/facebook" Facebook> 
+          
+          <a href="#/muro"> 
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
-          <a href="#/google" Google> 
+          <a href="#/muro"> 
             <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
           </a> 
       </div>
@@ -34,48 +37,17 @@ export const home = () => {
     `;
   divHome.innerHTML = viewHome;
 
-
+  //Ingresar con usuario existente
   const login = divHome.querySelector('#ingresar');
   login.addEventListener('click', () => {
-
 
     let email = divHome.querySelector('#email').value;
     let password = divHome.querySelector('#password').value;
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        if (user.user.emailVerified === true) {   //si el mail esta verificado ir al muro
-          window.location.href = '#/muro';
-        } else {
-          alert('Confirma tu correo electronico');
-          cleanFormLogin();
-        }
-      })
-      .catch((error) => {
-        //errores de formato en el login
-        let errorCode = error.code;
-        switch (errorCode) {
-          case 'auth/user-not-found':
-            alert('Usuario no registrado');
-            cleanFormLogin();
-            break;
-          case 'auth/wrong-password':
-            alert('Contraseña incorrecta');
-            cleanFormLogin();
-            break;
-          case 'auth/invalid-email':
-            alert('Email invalido');
-            cleanFormLogin();
-            break;
-          }  
-        })
-
-    //Limpia inputs cuando el login arroje error
-    const cleanFormLogin = () => {
-      document.querySelector('#email').value = '';
-      document.querySelector('#password').value = '';
-    }
+    startSession(email, password);
+     
+    observer();
   })
-    return divHome;
+  return divHome;
 
-  };
+};

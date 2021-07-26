@@ -1,3 +1,4 @@
+import { createUser} from '../signUp.js';
 
 
 export const templateSignUp = () =>{
@@ -25,56 +26,29 @@ export const templateSignUp = () =>{
   </div> `;
     divSignUp.innerHTML = signUp;
 
-
+    
   //funcionalidad del boton enviar y ejecuta registro firebase
   const register = divSignUp.querySelector('#buttonSignUp');
   register.addEventListener('click', ()=> {
- 
+  
     //recupera datos de inputs
     let nickSignUp = divSignUp.querySelector('#nickSignUp').value;
     let emailSignUp = divSignUp.querySelector('#emailSignUp').value;
     let passwordSignUp = divSignUp.querySelector('#passwordSignUp').value;
-   
-    firebase.auth().createUserWithEmailAndPassword(emailSignUp, passwordSignUp)
-    .then(() => {
     
-      const user = firebase.auth().currentUser;
-      user.updateProfile({
-        displayName: nickSignUp,
-      });
-
-      user.sendEmailVerification();
-      alert('Revisa la bandeja de entrada de tu correo electronico');
-      window.location.href = '#/Registrate';
-      cleanFormSignUp();
-      
-    })
-    .catch((error) => {
-     //errores de formato en el registro
-      let errorCode = error.code;
-      switch (errorCode) {
-        case 'auth/weak-password':
-          alert('La contraseña debe tener entre 6 y 8 caracteres');
-          cleanFormSignUp();
-          break;
-        case 'auth/invalid-email':
-          alert('La dirección de correo electrónico no es correcta');
-          cleanFormSignUp();
-          break;
-        case 'auth/email-already-in-use':
-          alert('Este usuario ya existe');
-          cleanFormSignUp();
-          break;
-
-     }
-    });
-    //Limpia inputs cuando el registro arroja error
-    const cleanFormSignUp = () => {
-      document.querySelector('#nickSignUp').value = '';
-      document.querySelector('#emailSignUp').value = '';
-      document.querySelector('#passwordSignUp').value = '';
+   // match se usa para obtener todas las datos dentro de una cadena y verificar que la contraseña este dentro de los parametros
+    if (passwordSignUp.match(/[a-z]/g) && passwordSignUp.match(/[0-9]/g) && passwordSignUp.length >= 6){
+      createUser(nickSignUp,emailSignUp,passwordSignUp);
+            
+    }else{
+      alert('La contraseña debe tener entre 6 y 8 caracteres alfanumericos');
+                 
     }
+    
   })
-    return divSignUp;
+
+  return divSignUp;
 
 };
+
+
