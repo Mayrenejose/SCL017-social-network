@@ -4,6 +4,7 @@ import { observer } from '../observador.js';
 import { facebookLogin } from '../facebookLogin.js';
 import { inicioSesionGoogle } from '../googleLogin.js';
 
+
 export const home = () => {
   const divHome = document.createElement('div');
   const viewHome = `
@@ -60,7 +61,12 @@ export const home = () => {
     const googleLogin = divHome.querySelector('#google');
     googleLogin.addEventListener("click", inicioSesionGoogle);
 
+
+
       return divHome;
+
     
-};  
+
+    
+};
 

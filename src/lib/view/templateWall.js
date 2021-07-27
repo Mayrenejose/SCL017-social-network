@@ -1,9 +1,13 @@
+import {logOut} from './../logOut.js';
+
 export const wall = e => {
 
     const wallHome = document.createElement('div');
     const viewWall = `
     <div class="header">
-        <h1>Barra superior</h1></div>
+        <h1>Barra superior</h1>
+        <button id="logOut">Cerrar Sesión </button>
+        </div>
     
     <div class="wallContainer">
      <div class="postOne">¿Qué Regalas?</div>
@@ -17,6 +21,9 @@ export const wall = e => {
     `;
 
     wallHome.innerHTML = viewWall;
+
+    const buttonLogOut = wallHome.querySelector('#logOut');
+    buttonLogOut.addEventListener("click", logOut);
 
     return wallHome;
     }
