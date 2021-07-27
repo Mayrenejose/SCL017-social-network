@@ -1,37 +1,48 @@
 
+//variable firestone
+const db = firebase.firestore();
 
-
-//busca nombre de usuario que ingresa
-//export const nameUser = () => firebase.auth().currentUser;
 
 //crear publicacion
-//export const createPost = () => {
-    /*const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
-    let userPost = firebase.auth().currentUser;    //usuario que esta comentando
-    let userName = userPost.displayName;
-    if (userPost === null) {                //si no encuentra el nombre de usuario usa el email
+export const createPost = () => {
+    const userPost = firebase.auth().currentUser;    //usuario que esta comentando
+    const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
+    const userName = userPost.displayName;
+    const userEmail = userPost.email;
+    console.log(userName);
+
+    if (userPost === null) {    
+        console.log(userName);            //si no encuentra el nombre de usuario usa el email
         userName = userPost.email;
     }
 
-    let photoUser = user.photoURL;  //configurando foto de usuario
-    if (user.photoURL === null) {    //solo toma foto de usuario cuando accede con google o facebook
-        photoUser = './src/Assets/user.jpg';  //foto de usuario por defecto
-    }
-
     //agregar comentario a firestore
-    firebase.firestore().collection('comments').add({  //add para que firestore genere id de comentario
-        nombre = userName,      
-        photo = photoUser,
-        comments = postComment,
-        date = new Date(),
-        like = 0,
+    db.collection('comments').add({  //add para que firestore genere id de comentario
+        nombre: userName, 
+        email: userEmail,             
+        comments: postComment,
+        date: new Date(),
+        like: 0,
     })
         .then(() => {
             alert('Publicado');
+            window.location.href = '#/muro';
             console.log('comentario guardado firestone');
+            cleanFormPost(); 
         })
         .catch(() => {
             alert('error');
             console.error('error al guardar comentario');
         });
-}*/
+}
+
+//funcion que limpia el texterea solo cuando sepublica el comentario
+const cleanFormPost = () => {
+    document.querySelector('#postEluney').value = '';
+}
+
+export const publishNow = (wallHome) =>{
+    const publish = wallHome.querySelector('#postFull');
+    db.collection('comments').orderBy('fecha', 'desc')
+
+}

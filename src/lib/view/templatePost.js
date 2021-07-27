@@ -1,9 +1,9 @@
-//import {createPost} from '../post.js'
+import { createPost } from '../post.js'
 
+export const templatePost = () => {
 
-export const templatePost = () =>{
-    const divPost = document.createElement('div');
-    const viewPost =`
+  const divPost = document.createElement('div');
+  const viewPost = `
     <div class="containerPost" id="containerPost">
   <p>¿Que estas pensando?</p>
   <div id="containerTextarea">  
@@ -16,17 +16,20 @@ export const templatePost = () =>{
       <button class="buttonPost" id="cancelButton">Cancelar</button>
     </div>    
   </form>
-  <h2>Publicaciones Recientes</h2>
-    <div id="post"></div>
-</div>
+ </div>
 `;
-   divPost.innerHTML = viewPost;
-const btnpost = divPost.querySelector('#publicButton');
-btnpost.addEventListener('click', () =>{
-createPost();
-});
+  divPost.innerHTML = viewPost;
 
-   return divPost; 
+  const btnpost = divPost.querySelector('#publicButton'); //boton publicar llamado
+  btnpost.addEventListener('click', () => {
+    createPost();
+  });
 
+  const btnCancel = divPost.querySelector('#cancelButton'); //boton cancelar te lleva de vuelta al muro
+  btnCancel.addEventListener('click', () => {
+    window.location.href = '#/muro';
+  });
+
+  return divPost;
 
 };

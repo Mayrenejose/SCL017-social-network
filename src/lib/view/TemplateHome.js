@@ -4,6 +4,7 @@ import { observer } from '../observador.js';
 import { facebookLogin } from '../facebookLogin.js';
 import { inicioSesionGoogle } from '../googleLogin.js';
 
+
 export const home = () => {
   const divHome = document.createElement('div');
   const viewHome = `
@@ -30,11 +31,11 @@ export const home = () => {
           <a href="#/muro"> 
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
-          <a href="#/muro"> 
-        
-          <a href="#/muro"> 
+                 
+          
             <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
-          </a> 
+            
+            
       </div>
 
     </div>
@@ -60,7 +61,12 @@ export const home = () => {
     const googleLogin = divHome.querySelector('#google');
     googleLogin.addEventListener("click", inicioSesionGoogle);
 
+
+
       return divHome;
+
     
-};  
+
+    
+};
 
