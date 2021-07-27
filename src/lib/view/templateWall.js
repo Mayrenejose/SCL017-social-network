@@ -13,11 +13,9 @@ export const wall = e => {
      <div class="postOne">¿Qué Regalas?</div>
      <div class="postTwo">¿Qué Regalas?</div>
     </div>
-    
-    <div>
     <a href="#/post"> Postear mensaje     
     </a>
-  </div>
+    <div id='postFull'></div>
     `;
 
     wallHome.innerHTML = viewWall;
