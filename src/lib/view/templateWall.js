@@ -4,7 +4,6 @@ export const wall = e => {
     const viewWall = `
     <div class="header">
         <h1>Barra de Navegacion</h1>
-        <button class="goToPost" placeholder= "Quiero Postear"></button>
     </div>
     
     <div class="wallContainer">
