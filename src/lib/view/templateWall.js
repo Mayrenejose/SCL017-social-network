@@ -3,7 +3,9 @@ export const wall = e => {
     const wallHome = document.createElement('div');
     const viewWall = `
     <div class="header">
-        <h1>Barra superior</h1></div>
+        <h1>Barra de Navegacion</h1>
+        <button class="goToPost" placeholder= "Quiero Postear"></button>
+    </div>
     
     <div class="wallContainer">
      <div class="postOne">¿Qué Regalas?</div>
