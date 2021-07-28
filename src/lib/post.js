@@ -41,8 +41,13 @@ const cleanFormPost = () => {
     document.querySelector('#postEluney').value = '';
 }
 
-export const publishNow = (wallHome) =>{
+/*export const publishNow = (wallHome) =>{
     const publish = wallHome.querySelector('#postFull');
-    db.collection('comments').orderBy('fecha', 'desc')
+    db.collection('comments').orderBy('fecha', 'desc')*/  //ordenar los comentarios por fecha descendientes
+    
+export const publishGet = () =>{
+    
+    return db.collection("comments").orderBy('date', 'desc').get(); //traer los comentarios de la coleccion
+       
 
 }
