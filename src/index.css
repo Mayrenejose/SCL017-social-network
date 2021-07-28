@@ -123,27 +123,62 @@ h1 {
 }
 
 .wallContainer {
-    background-color: skyblue;
+    background-color: #C3DBD5;
     display: grid;
-    grid-template-columns: 15% 30%  10% 30% 15%;
+    grid-template-columns: 15% 30% 10% 30% max-content;
     grid-template-rows: 50px 668px 50px;
-    }
+}
     
     .header {
-      background-color: lightpink;
+      background-color: #398C6E;
     }
 
     
     .postOne {
       background-color: lightgoldenrodyellow;
-      grid-column: 2/2;
+      grid-column: 2/5;
       grid-row: 2/2;
     }
+
+.containerBoxGreenOne{
+    width: 6%;
+    height: 14%;
+    background-color: transparent;
+    margin-top: -10%;
+    margin-left: 4%;
+}
+
+.boxGreenOne{
+    width: 100%;
+    height: 100%;
+
+}
+
+h2 {
+    font-family: 'Sofia', cursive;
+    font-size: 33px;
+    margin-left: 13%;
+    color: white;
+}
+.containerButton {
+    width: 30%;
+    height: 15%;
+    margin-left: 46%;
+    margin-top: 1%;
+    background-color: chartreuse;
+}
+
+.buttonLogOut{
+    width: 100%;
+    height: 100%;
+}
     
-    .postTwo {
-      background-color: lightsalmon;
-      grid-column: 4/4;
-      grid-row: 2/2;
-    }
+h3 {
+    font-family: 'Solway', serif;
+    font-size: 14px;
+    margin-left: 13%;
+    color: white;
+    margin-top: -3%;
+}
     
 
