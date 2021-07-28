@@ -1,5 +1,5 @@
 import { logOut } from './../logOut.js';
-import { publishGet } from '../post.js'; // const que se trae los comentarios de la coleccion
+import { getComments } from '../post.js'; // const que se trae los comentarios de la coleccion
 
 export const wall = e => {
 
@@ -24,17 +24,33 @@ export const wall = e => {
   const buttonLogOut = wallHome.querySelector('#logOut');
   buttonLogOut.addEventListener("click", logOut);
 
+
+  const insertComments = ( postDiv, data) =>{
+    //postDiv.innerHTML += data.comments;
+    /*postDiv.innerHTML += `
+    <div id="divPrincipal-${doc.nombre}" class="divPrincipal"> ${doc.nombre} </div>
+    `;
+    console.log(data);*/
+
+
+  }
+
   //llama a coleccion y devuelve promesa
-  publishGet()
+  getComments()
     .then(querySnapshot => {
       querySnapshot.forEach((doc) => {
         const postDiv = wallHome.querySelector('#postFull');
-        postDiv.innerHTML = '';
-        postDiv.innerHTML +=
+        postDiv.innerHTML = 
+        `
+        <div id="divPrincipal-${doc.nombre}" class="divPrincipal"> ${doc.nombre} </div>
+        `;
+        console.log(doc.nombre);
+        //postDiv.innerHTML//
+        //insertComments(postDiv, doc.data());
 
         // aqui crear elementos 
         console.log('hola may');
-        console.log(doc.id, " => ", doc.data());
+        console.log(doc.data().comments);
       });
 
     })
