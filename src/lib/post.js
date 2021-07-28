@@ -1,4 +1,3 @@
-
 //variable firestone
 const db = firebase.firestore();
 
@@ -23,6 +22,7 @@ export const createPost = () => {
         comments: postComment,
         date: new Date(),
         like: 0,
+        //img:
     })
         .then(() => {
             alert('Publicado');
@@ -45,7 +45,7 @@ const cleanFormPost = () => {
     const publish = wallHome.querySelector('#postFull');
     db.collection('comments').orderBy('fecha', 'desc')*/  //ordenar los comentarios por fecha descendientes
     
-export const publishGet = () =>{
+export const getComments = () =>{
     
     return db.collection("comments").orderBy('date', 'desc').get(); //traer los comentarios de la coleccion
        
