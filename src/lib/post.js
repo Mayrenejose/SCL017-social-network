@@ -15,6 +15,11 @@ export const createPost = () => {
         userName = userPost.email;
     }
 
+    let photoUser = userPost.photoURL;  //foto de usuario
+    if (userPost.photoURL === null) {    //solo toma foto de usuario cuando accede con google o facebook
+        photoUser = '../Assets/user.jpg';  //foto de usuario por defecto
+    }
+
     //agregar comentario a firestore
     db.collection('comments').add({  //add para que firestore genere id de comentario
         nombre: userName, 
@@ -22,7 +27,11 @@ export const createPost = () => {
         comments: postComment,
         date: new Date(),
         like: 0,
-        /*img:*/
+
+        //img:
+        photo: photoUser,
+
+
     })
         .then(() => {
             alert('Publicado');
