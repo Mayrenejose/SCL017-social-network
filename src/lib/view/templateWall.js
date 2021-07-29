@@ -23,27 +23,35 @@ export const wall = e => {
   // cierre de sesion
   const buttonLogOut = wallHome.querySelector('#logOut');
   buttonLogOut.addEventListener("click", logOut);
+ 
+ 
+   
   
+    /*let backCard = document.createElement('img');
+    backCard.className = 'backCard';
+    backCard.src = './Assets/user.jpg';
+    document.body.appendChild(backCard);*/
 
-  const insertComments = ( postDiv, data) =>{
-    postDiv.innerHTML += data.comments;
-    console.log(data);
 
-
-  }
-
+ 
   //llama a coleccion y devuelve promesa
   getComments()
     .then(querySnapshot => {
+     
       querySnapshot.forEach((doc) => {
         const postDiv = wallHome.querySelector('#postFull');
-        /*postDiv.innerHTML = '';
-        postDiv.innerHTML*/
-        insertComments(postDiv, doc.data());
+        postDiv.innerHTML += 
+        `
+        <div id="divPrincipal-${doc.id}" class="divPrincipal"> ${doc.data().nombre} ${doc.data().comments} </div><hr>
+        `;
+
+        console.log(doc.data());
+        //postDiv.innerHTML//
+        //insertComments(postDiv, doc.data());
 
         // aqui crear elementos 
-        console.log('hola may');
-        console.log(doc.data().comments);
+        //console.log('hola may');
+        //console.log(doc.data().comments);
       });
 
     })
