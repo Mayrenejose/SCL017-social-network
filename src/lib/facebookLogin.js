@@ -5,6 +5,7 @@ export const facebookLogin = e=> {
   const provider = new firebase.auth.FacebookAuthProvider();
   firebase.auth().signInWithPopup(provider)
   .then((results) => {
+    window.location.href = "#/muro";
     console.log(results);
     console.log('facebook sign in')
   })

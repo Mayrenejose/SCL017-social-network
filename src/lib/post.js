@@ -27,8 +27,10 @@ export const createPost = () => {
         comments: postComment,
         date: new Date(),
         like: 0,
+
         //img:
         photo: photoUser,
+
 
     })
         .then(() => {
@@ -42,6 +44,16 @@ export const createPost = () => {
             console.error('error al guardar comentario');
         });
 }
+
+//agregar imagen
+
+export const getFile = () => {
+    const sendFile = document.querySelector('#filePost').file;
+    console.log();
+
+};
+
+
 
 //funcion que limpia el texterea solo cuando sepublica el comentario
 const cleanFormPost = () => {
