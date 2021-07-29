@@ -33,3 +33,5 @@ export const templatePost = () => {
   return divPost;
 
 };
+
+/*const getFile = divPost.querySelector('#filePost'); //input file*/
