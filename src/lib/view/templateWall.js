@@ -25,22 +25,22 @@ export const wall = (e) => {
 
   const insertComments = (postDiv, data) => {
     //postDiv.innerHTML += data.comments;
-    postDiv.innerHTML += "<div class='divComments'>" + "<button id='edit' class='buttonEdit'>Editar</button>"+ "<button id='delete' class='buttonDelete'>Borrar</button>"+ "<button id='like' class='buttonLike'>Like</button>" + "<div id='photo' class='photoProfile'> <img class='IconoProfile' src='Assets/user.jpg'></div>"
-    + data.nombre + " " +data.comments + "</div>";
-    console.log(data);
+
+
+    postDiv.innerHTML += "<div class='divComments' id='divComments' >" + "<button id='edit' class='buttonEdit'>Editar</button>" + "<button id='delete' class='buttonDelete'>Borrar</button>" + "<button id='like' class='buttonLike'>Like</button>" + "<div id='photo' class='photoProfile'> <img class='IconoProfile' src='Assets/user.jpg'></div>"
+      + data.nombre + " " + data.comments + " " + data.date.toDate() + "</div>"
   };
 
- 
+
   //llama a coleccion y devuelve promesa
   getComments().then((querySnapshot) => {
-    console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
       const postDiv = wallHome.querySelector("#postFull");
-      /*postDiv.innerHTML = '';
-        postDiv.innerHTML*/
+      //postDiv.innerHTML +=`<div class='divComments' id='divComments-${doc.id}'> ${doc.data().nombre} </div>`
+
       insertComments(postDiv, doc.data());
 
-      // aqui crear elementos
+
       console.log("hola may");
       console.log(doc.data().comments);
     });
