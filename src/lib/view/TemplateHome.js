@@ -26,10 +26,10 @@ export const home = () => {
             <button id="registrate" class="Registro" > Regístrate</button>
           </a>
           
-          <a href="#/muro"> 
+           
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
-          <a href="#/muro"> 
+         
             <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
           
       </div>
