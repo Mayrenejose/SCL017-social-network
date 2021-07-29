@@ -8,13 +8,17 @@ export const createPost = () => {
     const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
     const userName = userPost.displayName;
     const userEmail = userPost.email;
-    console.log(userName);
-
+    
     if (userPost === null) {    
         console.log(userName);            //si no encuentra el nombre de usuario usa el email
         userName = userPost.email;
     }
 
+    let photoUser = userPost.photoURL;  //foto de usuario
+    if (userPost.photoURL === null) {    //solo toma foto de usuario cuando accede con google o facebook
+        photoUser = '../Assets/user.jpg';  //foto de usuario por defecto
+    }
+    
     //agregar comentario a firestore
     db.collection('comments').add({  //add para que firestore genere id de comentario
         nombre: userName, 
@@ -23,6 +27,7 @@ export const createPost = () => {
         date: new Date(),
         like: 0,
         //img: URL,
+        photo: photoUser,
     })
         .then(() => {
             alert('Publicado');
@@ -42,10 +47,9 @@ const cleanFormPost = () => {
 }
 
   //traer los comentarios de la coleccion  
-export const getComments = () =>{
-    
+export const getComments = () =>{   
    
     return db.collection("comments").orderBy('date', 'desc').get(); //traer los comentarios de la coleccion
-       
+     
 
 }

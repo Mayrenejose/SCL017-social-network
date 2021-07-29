@@ -23,17 +23,7 @@ export const wall = e => {
   // cierre de sesion
   const buttonLogOut = wallHome.querySelector('#logOut');
   buttonLogOut.addEventListener("click", logOut);
- 
- 
-   
   
-    /*let backCard = document.createElement('img');
-    backCard.className = 'backCard';
-    backCard.src = './Assets/user.jpg';
-    document.body.appendChild(backCard);*/
-
-
- 
   //llama a coleccion y devuelve promesa
   getComments()
     .then(querySnapshot => {
@@ -42,16 +32,12 @@ export const wall = e => {
         const postDiv = wallHome.querySelector('#postFull');
         postDiv.innerHTML += 
         `
-        <div id="divPrincipal-${doc.id}" class="divPrincipal"> ${doc.data().nombre} ${doc.data().comments} </div><hr>
+        <div id="divPrincipal-${doc.id}" class="divPrincipal"> ${doc.data().nombre} ${doc.data().comments} ${new Date().toLocaleString()}</div><hr>
+        
         `;
 
         console.log(doc.data());
-        //postDiv.innerHTML//
-        //insertComments(postDiv, doc.data());
-
-        // aqui crear elementos 
-        //console.log('hola may');
-        //console.log(doc.data().comments);
+       
       });
 
     })
