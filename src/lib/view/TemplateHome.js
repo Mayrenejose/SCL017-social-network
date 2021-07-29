@@ -29,8 +29,15 @@ export const home = () => {
            
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
+<<<<<<< HEAD
          
             <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
+=======
+          
+        
+          
+          <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
+>>>>>>> 38c03a3 (imagen user)
           
       </div>
 
