@@ -180,5 +180,21 @@ h3 {
     color: white;
     margin-top: -3%;
 }
+
+.divComments{
+    width: 100%;
+    height: 10%;
+    background-color: coral;
+    padding: 0%;
+    border: solid black;
+}
+
+.IconoProfile {
+    height: 10%;
+    width: 15%;
+    margin-left: 85%;
+}
+
+
     
 
