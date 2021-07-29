@@ -25,8 +25,24 @@ export const wall = (e) => {
 
   const insertComments = (postDiv, data) => {
     //postDiv.innerHTML += data.comments;
-    postDiv.innerHTML += "<div class='divComments'>" + "<button id='edit' class='buttonEdit'>Editar</button>"+ "<button id='delete' class='buttonDelete'>Borrar</button>"+ "<button id='like' class='buttonLike'>Like</button>" + "<div id='photo' class='photoProfile'> <img class='IconoProfile' src='Assets/user.jpg'></div>"
-    + data.nombre + " " +data.comments + "</div>";
+    const date = new Date(data.date.toDate())
+    const year = date.getFullYear()
+    const month = date.getMonth()
+    const day = date.getDate()
+    const hour = date.getHours()
+    const minute= date.getMinutes();
+    postDiv.innerHTML +=
+      "<div class='divComments'>" +
+      "<button id='edit' class='buttonEdit'>Editar</button>" +
+      "<button id='delete' class='buttonDelete'>Borrar</button>" +
+      "<button id='like' class='buttonLike'>Like</button>" +
+      "<div id='photo' class='photoProfile'> <img class='IconoProfile' src='Assets/user.jpg'></div>" +
+      data.nombre +
+      " " +
+      data.comments +
+      " " +
+     (year + "-" + month + "-" + day + " " + hour+":"+minute) +
+      "</div>";
     console.log(data);
   };
 
