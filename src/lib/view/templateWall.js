@@ -36,7 +36,7 @@ export const wall = (e) => {
       "<button id='edit' class='buttonEdit'>Editar</button>" +
       "<button id='delete' class='buttonDelete'>Borrar</button>" +
       "<button id='like' class='buttonLike'>Like</button>" +
-      "<div id='photo' class='photoProfile'> <img class='IconoProfile' src='Assets/user.jpg'></div>" +
+      "<div id='photo' class='photoProfile'> <img class='IconoProfile' src='Assets/iconoUsuario.png'></div>" +
       data.nombre +
       " " +
       data.comments +

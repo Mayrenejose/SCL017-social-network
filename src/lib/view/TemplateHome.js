@@ -1,12 +1,10 @@
-
-import { startSession } from '../loginEmail.js';
-import { observer } from '../observador.js';
-import { facebookLogin } from '../facebookLogin.js';
-import { inicioSesionGoogle } from '../googleLogin.js';
-
+import { startSession } from "../loginEmail.js";
+import { observer } from "../observador.js";
+import { facebookLogin } from "../facebookLogin.js";
+import { inicioSesionGoogle } from "../googleLogin.js";
 
 export const home = () => {
-  const divHome = document.createElement('div');
+  const divHome = document.createElement("div");
   const viewHome = `
     <div class="containerGeneral">
       <div class="containerIconGift">
@@ -32,9 +30,7 @@ export const home = () => {
             <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
           </a>
           <a href="#/muro"> 
-        
-          
-          <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
+            <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
           
       </div>
 
@@ -42,31 +38,22 @@ export const home = () => {
     `;
   divHome.innerHTML = viewHome;
 
-
   //Ingresar con usuario existente
-  const login = divHome.querySelector('#ingresar');
-  login.addEventListener('click', () => {
-
-    let email = divHome.querySelector('#email').value;
-    let password = divHome.querySelector('#password').value;
+  const login = divHome.querySelector("#ingresar");
+  login.addEventListener("click", () => {
+    let email = divHome.querySelector("#email").value;
+    let password = divHome.querySelector("#password").value;
 
     startSession(email, password);
-     
+
     observer();
-  })
-  
-    const facebookButton = divHome.querySelector('#facebook');
-    facebookButton.addEventListener("click", facebookLogin);
+  });
 
-    const googleLogin = divHome.querySelector('#google');
-    googleLogin.addEventListener("click", inicioSesionGoogle);
+  const facebookButton = divHome.querySelector("#facebook");
+  facebookButton.addEventListener("click", facebookLogin);
 
+  const googleLogin = divHome.querySelector("#google");
+  googleLogin.addEventListener("click", inicioSesionGoogle);
 
-
-      return divHome;
-
-    
-
-    
+  return divHome;
 };
-
