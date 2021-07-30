@@ -22,6 +22,16 @@ export const wall = (e) => {
   // cierre de sesion
   const buttonLogOut = wallHome.querySelector("#logOut");
   buttonLogOut.addEventListener("click", logOut);
+ 
+ 
+  //const insertComments = ( postDiv, data) =>{
+   
+   
+  
+    let backCard = document.createElement('img');
+    backCard.className = 'backCard';
+    backCard.src = './Assets/user.jpg';
+    document.body.appendChild(backCard);
 
   //Imprimiendo comentarios en pantalla
   const insertComments = (postDiv, data) => {
