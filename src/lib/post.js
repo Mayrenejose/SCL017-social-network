@@ -24,7 +24,7 @@ export const createPost = () => {
         email: userEmail,             
         comments: postComment,
         date: new Date(),
-        like: 0,
+        like: [],
         //img:
         photo: photoUser,
 
@@ -43,14 +43,11 @@ export const createPost = () => {
 }
 
 //agregar imagen
-
 export const getFile = () => {
     const sendFile = document.querySelector('#filePost').file;
     console.log();
 
 };
-
-
 
 //funcion que limpia el texterea solo cuando sepublica el comentario
 const cleanFormPost = () => {
