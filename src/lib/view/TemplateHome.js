@@ -27,10 +27,7 @@ export const home = () => {
           </a>      
           
           <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
-          
-         
-        
-          
+                    
           <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
 
           

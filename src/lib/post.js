@@ -18,17 +18,16 @@ export const createPost = () => {
     if (userPost.photoURL === null) {    //solo toma foto de usuario cuando accede con google o facebook
         photoUser = '../Assets/user.jpg';  //foto de usuario por defecto
     }
+    
     //agregar comentario a firestore
     db.collection('comments').add({  //add para que firestore genere id de comentario
         nombre: userName, 
         email: userEmail,             
         comments: postComment,
         date: new Date(),
-        like: [],
-        //img:
+        like: 0,
+        //img: URL,
         photo: photoUser,
-
-
     })
         .then(() => {
             alert('Publicado');
@@ -54,9 +53,9 @@ const cleanFormPost = () => {
     document.querySelector('#postEluney').value = '';
 }
 
-//traer los comentarios de la coleccion     
-export const getComments = () =>{
-    
+  //traer los comentarios de la coleccion  
+export const getComments = () =>{   
+   
     return db.collection("comments").orderBy('date', 'desc').get(); //traer los comentarios de la coleccion
      
 
