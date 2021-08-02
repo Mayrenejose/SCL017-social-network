@@ -25,8 +25,8 @@ export const createPost = () => {
         email: userEmail,             
         comments: postComment,
         date: new Date(),
-        like: 0,
-        //img: URL,
+        like: [],
+        //img: imgURL,
         photo: photoUser,
     })
         .then(() => {
