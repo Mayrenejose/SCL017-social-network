@@ -8,8 +8,7 @@ export const createPost = () => {
     const postComment = document.getElementById('postEluney').value;  //buscar el comentario en el id
     const userName = userPost.displayName;
     const userEmail = userPost.email;
-    console.log(userName);
-
+    
     if (userPost === null) {    
         console.log(userName);            //si no encuentra el nombre de usuario usa el email
         userName = userPost.email;
@@ -19,7 +18,7 @@ export const createPost = () => {
     if (userPost.photoURL === null) {    //solo toma foto de usuario cuando accede con google o facebook
         photoUser = '../Assets/user.jpg';  //foto de usuario por defecto
     }
-
+    
     //agregar comentario a firestore
     db.collection('comments').add({  //add para que firestore genere id de comentario
         nombre: userName, 
@@ -27,11 +26,8 @@ export const createPost = () => {
         comments: postComment,
         date: new Date(),
         like: 0,
-
-        //img:
+        //img: URL,
         photo: photoUser,
-
-
     })
         .then(() => {
             alert('Publicado');
@@ -46,27 +42,21 @@ export const createPost = () => {
 }
 
 //agregar imagen
-
 export const getFile = () => {
     const sendFile = document.querySelector('#filePost').file;
     console.log();
 
 };
 
-
-
 //funcion que limpia el texterea solo cuando sepublica el comentario
 const cleanFormPost = () => {
     document.querySelector('#postEluney').value = '';
 }
 
-/*export const publishNow = (wallHome) =>{
-    const publish = wallHome.querySelector('#postFull');
-    db.collection('comments').orderBy('fecha', 'desc')*/  //ordenar los comentarios por fecha descendientes
-    
-export const getComments = () =>{
-    
+  //traer los comentarios de la coleccion  
+export const getComments = () =>{   
+   
     return db.collection("comments").orderBy('date', 'desc').get(); //traer los comentarios de la coleccion
-       
+     
 
 }

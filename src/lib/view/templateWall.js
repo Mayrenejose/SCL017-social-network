@@ -1,5 +1,7 @@
-import { logOut } from "./../logOut.js";
-import { getComments } from "../post.js"; // const que se trae los comentarios de la coleccion
+import { logOut } from './../logOut.js';
+import { getComments } from '../post.js'; // const que se trae los comentarios de la coleccion
+import { deletePost } from '../likeDeletEdition.js';
+
 
 export const wall = (e) => {
   const wallHome = document.createElement("div");
@@ -23,43 +25,68 @@ export const wall = (e) => {
   const buttonLogOut = wallHome.querySelector("#logOut");
   buttonLogOut.addEventListener("click", logOut);
 
-  const insertComments = (postDiv, data) => {
-    //postDiv.innerHTML += data.comments;
-    const date = new Date(data.date.toDate())
-    const year = date.getFullYear()
-    const month = date.getMonth()
-    const day = date.getDate()
-    const hour = date.getHours()
-    const minute= date.getMinutes();
-    postDiv.innerHTML +=
-      "<div class='divComments'>" +
-      "<button id='edit' class='buttonEdit'>Editar</button>" +
-      "<button id='delete' class='buttonDelete'>Borrar</button>" +
-      "<button id='like' class='buttonLike'>Like</button>" +
-      "<div id='photo' class='photoProfile'> <img class='IconoProfile' src='Assets/iconoUsuario.png'></div>" +
-      data.nombre +
-      " " +
-      data.comments +
-      " " +
-     (year + "-" + month + "-" + day + " " + hour+":"+minute) +
-      "</div>";
-    console.log(data);
-  };
-
   //llama a coleccion y devuelve promesa
   getComments().then((querySnapshot) => {
-    console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
       const postDiv = wallHome.querySelector("#postFull");
-      /*postDiv.innerHTML = '';
-        postDiv.innerHTML*/
-      insertComments(postDiv, doc.data());
-
-      // aqui crear elementos
-      console.log("hola may");
+      const currentUserData = firebase.auth().currentUser;
+      const emailData = currentUserData.email;
+      
+      const threePoint = `<img src="./Assets/mas-boton-de-tres-puntos.png" class="option" id="threPoint-${doc.id}" ></img>`
+      const imgPost = `<img src="${doc.data().imgURL}" class="ImgPostId"></img>`
+      postDiv.innerHTML += `<div class='divComments' id='divComments-${doc.id}'>
+      <div class="containerId">
+        <div class="idPost">
+          <img class="photoId" src="${doc.data().photo}" alt="photoUser">
+          <p class="nameId">${doc.data().nombre}</p>
+          <div id="dateId-${doc.id}" class="dateId">${doc.data().date.toDate().toLocaleDateString('es-CL')}</div>
+        </div>
+      </div>
+      <div class="postOpcions" id="postOpcions">
+        <div class="pointThree">
+          ${doc.data().email === emailData ? threePoint : ''}
+            <div id="windowContent-${doc.id}" class="windowContent">
+                <p id="openEdit-${doc.id}" class="editPost">Editar</p>
+                <p id="openDelete-${doc.id}" class="delete">Eliminar</p>
+              </div>
+            
+      <p class="postId" id='contentPost-${doc.id}'> <br> ${doc.data().comments}</p>
+      <div class='likesId'>
+        
+        <p class="numberLike" id="numberLike-${doc.id}">${doc.data().like.length}</p>  
+        <div class='commentId'>           
+        <img src="./Assets/burbuja-de-dialogo.png" alt="comentar" id="comentarPost-${doc.id}" class="comentarPost">
+        </div> 
+      </div>
+      
+    </div>
+   `;
+      //<span id="heartColor-${doc.id}">${doc.data().like.includes(emailData) ? heartBlue : heartWhite}</span>
+      /*<div class="postImage">
+      ${doc.data().imgURL === undefined ? '' : imgPost}
+      </div>*/     
       console.log(doc.data().comments);
     });
-  });
 
+    /*querySnapshot.forEach((doc) =>{
+      const currentUserData = firebase.auth().currentUser;
+      const emailData = currentUserData.email;
+
+      if (doc.data().email === emailData) {
+        const btnOpcion = document.querySelector(`#threePoint-${doc.id}`); // boton de las opciones
+        btnOpcion.addEventListener('click', () => {
+          document.getElementById('windowContent-${doc.id}').classList.toggle('openOption');
+        })
+        }*/
+
+    //})
+ 
+
+
+
+
+    });
+
+    
   return wallHome;
 };
