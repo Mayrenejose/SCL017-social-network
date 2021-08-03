@@ -1,6 +1,7 @@
 import { logOut } from './../logOut.js';
-import { getComments } from '../post.js'; 
+import { getComments } from '../post.js';
 import { likePost } from '../likeDeletEdition.js';
+import { deletePost } from '../likeDeletEdition.js';
 
 
 export const wall = (e) => {
@@ -29,14 +30,14 @@ export const wall = (e) => {
   getComments().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
       const postDiv = wallHome.querySelector("#postFull");
-      const userPost = firebase.auth().currentUser; 
+      const userPost = firebase.auth().currentUser;
       const emailData = userPost.email;
       console.log(emailData);
       console.log(userPost);
 
 
-      const heartBlack =`<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181"/></svg>`;      
-      const heartWhite =`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>`;      
+      const heartBlack = `<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181"/></svg>`;
+      const heartWhite = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"/></svg>`;
       const threePoint = `<img src="./Assets/mas-boton-de-tres-puntos.png" class="option" id="threPoint-${doc.id}" ></img>`
       //const imgPost = `<img src="${doc.data().imgURL}" class="ImgPostId"></img>`
       postDiv.innerHTML += `<div class='divComments' id='divComments-${doc.id}'>
@@ -63,49 +64,65 @@ export const wall = (e) => {
         <div class='commentId'>           
         <img src="./Assets/burbuja-de-dialogo.png" alt="comentar" id="comentarPost-${doc.id}" class="comentarPost">
         </div> 
+        <div id='editModal-${doc.id}' class="editModal">
+      <div class="newPostModal">
+        <textarea id="newPostEluney-${doc.id}" class="newPostEluney" cols="30" rows="10"  required> ${doc.data().comments}</textarea>
+        <div class="btnModalPost">
+          <button id='edit-${doc.id}' class="edit">Editar</button>
+          <button id='cancelEdit-${doc.id}' class="cancelEdit">Cancelar</button>
+
+        </div>
+      </div>
+
+    </div>
       </div>
       
     </div>
    `;
-  
+
 
       /*<div class="postImage">
       ${doc.data().imgURL === undefined ? '' : imgPost}
-      </div>*/     
+      </div>*/
       console.log(doc.data().comments);
-
-     
     });
 
-    querySnapshot.forEach((doc) =>{
-      const userPost = firebase.auth().currentUser; 
+    querySnapshot.forEach((doc) => {
+      const userPost = firebase.auth().currentUser;
       const emailData = userPost.email;
-      const likeBtn = document.getElementById(`heardLike-${doc.id}`);//corazon like
       
-
-      //evento del corazon like      
-      likeBtn.addEventListener('click', () =>{
-        console.log('escuchando');
-        likePost(doc.id, emailData);
-        console.log(emailData);
+      //abrir editor de post
+      const modalEdit = document.getElementById(`editModal-${doc.id}`); // seccion que contiene el modal
+      const openEdit = document.getElementById(`edit-${doc.id}`); //boton que abre el modal  
+      openEdit.addEventListener('click', () =>{
+        modalEdit.style.display = 'none';
       });
-    
+             
+      //evento de eliminar post
+      const openDelet = document.getElementById(`openDelete-${doc.id}`);//busca boton eliminar
+      openDelet.addEventListener('click', () =>{
+        const confirmation = confirm('¿Estas seguro de eliminar el post?');
+        if(confirmation === true){
+          deletePost(doc.id)
+          const deleteComments = document.querySelector(`#divComments-${doc.id}`);
+          deleteComments.remove();
+        }
+      });
 
-      /*if (doc.data().email === emailData) {
-        const btnOpcion = document.querySelector(`#threePoint-${doc.id}`); // boton de las opciones
+      //evento del corazon like     
+      const likeBtn = document.getElementById(`heardLike-${doc.id}`);//corazon like  
+      likeBtn.addEventListener('click', () => {
+        likePost(doc.id, emailData);
+      });
+
+      //eventro abrir menu 3 puntos
+      if (doc.data().email === emailData) {
+        const btnOpcion = document.querySelector(`#threPoint-${doc.id}`); //busca boton de los tres puntos     
         btnOpcion.addEventListener('click', () => {
-          document.getElementById('windowContent-${doc.id}').classList.toggle('openOption');
+          document.getElementById(`windowContent-${doc.id}`).classList.toggle('openOption'); //busca la clase openOpcion que desplega las opciones
         })
-        }*/
-
-    }); 
- 
-
-
-
-  
-    });//cierre de doc
-
-    
+      }
+    });
+  });//cierre de doc    
   return wallHome;
 };

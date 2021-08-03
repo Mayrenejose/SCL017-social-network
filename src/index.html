@@ -18,6 +18,17 @@
 
 <body>
   <div class ="hola" id="root"> 
+    <div id=`editModal-${doc.id}` class="editModal">
+      <div class="newPostModal">
+        <textarea id="newPostEluney-${doc.id}" class="newPostEluney" cols="30" rows="10"  required> ${doc.data().comments}</textarea>
+        <div class="btnModalPost">
+          <button id=`edit-${doc.id}` class="edit">Editar</button>
+          <button id=`cancelEdit-${doc.id}` class="cancelEdit">Cancelar</button>
+
+        </div>
+      </div>
+
+    </div>
 
 
   </div>
