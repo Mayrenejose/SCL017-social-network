@@ -26,7 +26,7 @@ export const createPost = () => {
         comments: postComment,
         date: new Date(),
         like: [],
-        //img: URL,
+        //img: imgURL,
         photo: photoUser,
     })
         .then(() => {
