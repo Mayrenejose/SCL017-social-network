@@ -52,13 +52,13 @@ export const wall = (e) => {
           ${doc.data().email === emailData ? threePoint : ''}
             <div id="windowContent-${doc.id}" class="windowContent">
                 <p id="openEdit-${doc.id}" class="editPost">Editar</p>
-                <p id="openDelete-${doc.id}" class="delete">Eliminar</p>
+                <p id="openDelete-${doc.id}" class=" btn delete btn-edit">Eliminar</p>
               </div>
             
       <p class="postId" id='contentPost-${doc.id}'> <br> ${doc.data().comments}</p>
 
       <div class='likesId'> 
-      <span id="heardLike-${doc.id}">${doc.data().like.includes(emailData) ? heartBlack : heartWhite}</span>
+      <span id="heardLike-${doc.id}">${doc.data().like.includes(emailData) ? heartBlack : heartBlack}</span>
       <p class="numberLike" id="numberLik-${doc.id}">${doc.data().like.length}</p> 
         <div class='commentId'>           
         <img src="./Assets/burbuja-de-dialogo.png" alt="comentar" id="comentarPost-${doc.id}" class="comentarPost">
@@ -90,7 +90,12 @@ export const wall = (e) => {
         likePost(doc.id, emailData);
         console.log(emailData);
       });
-    
+      const btnsEdit = document.querySelectorAll('.btn-edit');
+      btnsEdit.forEach(btn => {
+        btn.addEventListener('click', e => {
+          console.log('editing');
+        });
+      });
 
       /*if (doc.data().email === emailData) {
         const btnOpcion = document.querySelector(`#threePoint-${doc.id}`); // boton de las opciones
