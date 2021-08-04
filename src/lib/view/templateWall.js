@@ -58,7 +58,11 @@ export const wall = (e) => {
       <p class="postId" id='contentPost-${doc.id}'> <br> ${doc.data().comments}</p>
 
       <div class='likesId'> 
+<<<<<<< HEAD
       <span id="heardLike-${doc.id}">${doc.data().like.includes(emailData) ? heartBlack : heartBlack}</span>
+=======
+      <span id="heardLike-${doc.id}">${doc.data().like.includes(emailData) ? heartWhite : heartBlack}</span>
+>>>>>>> 964b7ac37cecfbcdc5840817b0f1e5ea21bc7e91
       <p class="numberLike" id="numberLik-${doc.id}">${doc.data().like.length}</p> 
         <div class='commentId'>           
         <img src="./Assets/burbuja-de-dialogo.png" alt="comentar" id="comentarPost-${doc.id}" class="comentarPost">
@@ -83,8 +87,7 @@ export const wall = (e) => {
       const likeBtn = document.getElementById(`heardLike-${doc.id}`);//corazon like
       
 
-      //evento del corazon like
-      
+      //evento del corazon like      
       likeBtn.addEventListener('click', () =>{
         console.log('escuchando');
         likePost(doc.id, emailData);
