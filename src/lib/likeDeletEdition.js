@@ -24,9 +24,9 @@ const colorAndNumber = (idPost, likeNew, likeOld) => {
   numberLike.innerHTML = String(likeNew);
   const getLike = document.getElementById(`heardLike-${idPost}`); //cambiando color de corazon
   if (likeNew > likeOld) {
-    getLike.innerHTML = heartWhite;
-  } else {
     getLike.innerHTML = heartBlack;
+  } else {
+    getLike.innerHTML = heartWhite;
   }
 };
 

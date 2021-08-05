@@ -97,7 +97,7 @@ export const wall = (e) => {
 
       <div class='likesId'> 
       <span id="heardLike-${doc.id}">${
-        doc.data().like.includes(emailData) ? heartWhite : heartBlack
+        doc.data().like.includes(emailData) ? heartBlack : heartWhite
       }</span>
       <p class="numberLike" id="numberLik-${doc.id}">${
         doc.data().like.length
