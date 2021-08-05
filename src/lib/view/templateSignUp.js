@@ -6,22 +6,28 @@ export const templateSignUp = () =>{
     const signUp = `
     <div class="containerSignUp">
     <h1>¡Unete a Eluney!</h1>
-
-    <form id="formSignUp" method="POST">
-      <input class="pointSignUp" type="text" name="nick" id="nickSignUp" minlength="2" maxlength="25" placeholder="Ingresa nick de usuario" required>
-
-      <input class="pointSignUp" type="email" name="email" id="emailSignUp" placeholder="Ingresa correo electronico*" required>
-
-      <input class="pointSignUp" type="password" name="password" id="passwordSignUp" placeholder="Ingresa contraseña*" minlength="6" maxlength="8" required>
+    <div>
+      <img src="./Assets/regaloregistro.png" alt="te lo regalo" class="imgSign">
+    </div>
+    
+    <form class="singUpForm" id="formSignUp" method="POST">
+    <label class="fnick" for="fNick">Nombre de usuario</label>
+      <input class="pointSignUp" type="text" name="nick" id="nickSignUp" minlength="2" maxlength="25" required>
+    <label class="fnick" for="fNick">Email</label>
+      <input class="pointSignUp" type="email" name="email" id="emailSignUp"  required>
+      <label class="fnick" for="fNick">Contraseña</label>
+      <input class="pointSignUp" type="password" name="password" id="passwordSignUp" " minlength="6" maxlength="8" required>
     </form>
-  </div>
-
-  <div class="buttonSing">
+    <br>
+    <br>
+    <div>
     <button type="submit" class="buttonSignUp" id="buttonSignUp">Enviar</button>
   </div>
-
-  <footer class="footerSignUp">
-    <p>¿Ya tienes cuenta?</p> <a href=""><p>Iniciar sesion</p></a>
+  <br>
+  </div>
+  <br>
+    <footer class="footerSignUp">
+    <p class="texSignUp">¿Ya tienes cuenta? <a href="">Iniciar sesion</a></p>
   </footer>
   </div> `;
     divSignUp.innerHTML = signUp;

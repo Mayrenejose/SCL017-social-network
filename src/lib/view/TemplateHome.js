@@ -17,18 +17,16 @@ export const home = () => {
             <img class="boxGreen" src="Assets/sostenible (1).png">
 
           </div>
-          <input id="email" spellcheck="false" placeholder="Ingrese E-mail" type="email" name="text">
-          <input id="password" spellcheck="false" placeholder="Ingrese contraseña" type="password" name="text">
+          <input class="inputHome" id="email" spellcheck="false" placeholder="Ingrese E-mail" type="email" name="text">
+          <input class="inputHome" id="password" spellcheck="false" placeholder="Ingrese contraseña" type="password" name="text">
           
-            <button id="ingresar" class="ingresa"> Ingresar </button>
-          
-          <a href="#/Registrate"> 
-            <button id="registrate" class="Registro" > Regístrate</button>
-          </a>      
-          
+          <button id="ingresar" class="ingresa"> Ingresar </button>
+          <p class="o">--------- o ----------</p>                    
           <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
                     
           <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
+
+          <p class="goRegistre">¿Aun no te registras? <a href="#/Registrate">Ingresa Aqui</a></p>
 
           
       </div>
