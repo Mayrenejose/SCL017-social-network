@@ -80,7 +80,7 @@ export const editPostFb = (id, addEdit) => {
   console.log("id: ", id);
   const PostRef = db.collection("comments").doc(id);
   console.log(PostRef, "ineditpost");
-  return PostRef.update({
+  PostRef.update({
     postContent: addEdit,
     date: new Date(),
   })

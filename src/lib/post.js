@@ -23,7 +23,7 @@ export const createPost = () => {
     db.collection('comments').add({  //add para que firestore genere id de comentario
         nombre: userName, 
         email: userEmail,             
-        comments: postComment,
+        postContent: postComment,
         date: new Date(),
         like: [],
         //img: imgURL,

@@ -28,12 +28,9 @@ body{
     background: rgba(117, 111, 129, 0.74);
     width: 25%;
     z-index: 3;
-
-    margin-top: -54%;
-    margin-left: 9%;
+    margin-top: -28%;
+    margin-left: 21%;
     height: 52%;
-
-    
 }
 
 .containerBoxGreen {
@@ -157,7 +154,7 @@ h1 {
 
     
 .postFull {
-    background-color: lightgoldenrodyellow;
+    background-color: transparent;
     grid-column: 2/5;
     grid-row: 2/2;
     
@@ -311,7 +308,7 @@ margin-right: auto;
     height: auto;
     display: block;
     margin: auto;
-    margin-top: -8%;
+    margin-top: -2%;
 }
 
 .pointSignUp {
@@ -372,10 +369,14 @@ margin-right: auto;
 .texSignUp{
 text-align: center;
 }
-.heartIcon{
-    width: 13%;
+.heartIcon {
+    width: 8%;
     height: auto;
+    margin-left: 122%;
+    margin-top: 1%;
 }
+
+
 
 @media only screen and (device-width: 768px) {
     body{
