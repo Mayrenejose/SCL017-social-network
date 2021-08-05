@@ -1,7 +1,7 @@
 import { logOut } from "./../logOut.js";
 import { getComments } from "../post.js";
 import { likePost } from "../likeDeletEdition.js";
-import { deletePost } from "../likeDeletEdition.js";
+import { deletePost, editPostFb } from "../likeDeletEdition.js";
 
 const showEditPost = (doc) => {
   const divEdit = document.createElement("div");
@@ -12,11 +12,24 @@ const showEditPost = (doc) => {
   rows="10"
   required
 >
-  {" "}
+  
   ${doc.data().comments}
-</textarea>`;
+</textarea> 
+<button id="submitButton"  class="submit" type="submit">Guardar</button>`;
   divEdit.innerHTML = textArea;
-
+  const buttonSubmit = divEdit.querySelector("#submitButton");
+  let newPostToUpdate = "";
+  buttonSubmit.addEventListener("click", () => {
+    console.log("newPostToUpdate: ", newPostToUpdate);
+    editPostFb(doc.id, newPostToUpdate);
+    console.log(buttonSubmit, "buttonSubmit");
+  });
+  divEdit
+    .querySelector(`#newPostEluney-${doc.id}`)
+    .addEventListener("keypress", (e) => {
+      console.log("key: ", e);
+      newPostToUpdate += e.key;
+    });
   document.getElementById("modalPostBtn").appendChild(divEdit);
 };
 export const wall = (e) => {
@@ -92,7 +105,9 @@ export const wall = (e) => {
         <div id='editModal-${doc.id}' class="editModal">
       <div class="newPostModal">
 
+        <div id='modalPostBtn' class="btnModalPost">
 
+        </div>
       </div>
 
     </div>
