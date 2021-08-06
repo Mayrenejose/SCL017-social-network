@@ -74,28 +74,25 @@ export const wall = (e) => {
       //const imgPost = `<img src="${doc.data().imgURL}" class="ImgPostId"></img>`
       postDiv.innerHTML += `<div class='divComments' id='divComments-${doc.id}'>
       <div class="containerId">
-        <div class="idPost">
-          <img class="photoId" src="${doc.data().photo}" alt="photoUser">
-          <p class="nameId">${doc.data().nombre}</p>
-          <div id="dateId-${doc.id}" class="dateId">${doc
-        .data()
-        .date.toDate()
-        .toLocaleString("es-CL")}</div>
-        </div>
-      </div>
-      <div class="postOpcions" id="postOpcions">
+        <div class="idPost">        
+          <img class="photoId" src="${doc.data().photo}" alt="photoUser">        
+          
+          <p class="nameId">${doc.data().nombre} <br> <div id="dateId-${doc.id}" class="dateId">${doc.data().date.toDate().toLocaleString("es-CL")}</div></p>         
+         
         <div class="pointThree">
-          ${doc.data().email === emailData ? threePoint : ""}
-            <div id="windowContent-${doc.id}" class="windowContent">
-                <p id="openEdit-${doc.id}" class="editPost">Editar</p>
-                <p id="openDelete-${doc.id}" class="delete">Eliminar</p>
-              </div>
-            
+        ${doc.data().email === emailData ? threePoint : ""}
+          <div id="windowContent-${doc.id}" class="windowContent">
+              <p id="openEdit-${doc.id}" class="editPost">Editar</p>
+              <p id="openDelete-${doc.id}" class="delete">Eliminar</p>
+            </div>
+        </div>      
+         </div>             
       <p class="postId" id='contentPost-${doc.id}'> <br> ${
         doc.data().postContent
       }</p>
 
       <div class='likesId'> 
+      
       <span id="heardLike-${doc.id}">${
         doc.data().like.includes(emailData) ? heartBlack : heartWhite
       }</span>
@@ -120,8 +117,7 @@ export const wall = (e) => {
 
       /*<div class="postImage">
       ${doc.data().imgURL === undefined ? '' : imgPost}
-      </div>*/
-      console.log(doc.data().comments);
+      </div>*/      
     });
 
     querySnapshot.forEach((doc) => {
@@ -169,3 +165,4 @@ export const wall = (e) => {
 
   return wallHome;
 };
+
