@@ -47,7 +47,7 @@ export const wall = (e) => {
     <div class="wallContainer">
      <div class="postFull" id='postFull'></div>     
     </div>
-    <a href="#/post"> Postear mensaje     
+    <a  href="#/post"> Postear mensaje     
     </a>
     
     `;
