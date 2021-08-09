@@ -5,29 +5,29 @@ import { deletePost, editPostFb } from "../likeDeletEdition.js";
 
 const showEditPost = (doc) => {
   const divEdit = document.createElement("div");
-  const textArea = `<textarea
-  id="newPostEluney-${doc.id}"
-  class="newPostEluney"
-  cols="30"
-  rows="10"
-  required
->
-  
-  ${doc.data().postContent}
-</textarea> 
-<button id="submitButton"  class="submit" type="submit">Guardar</button>`;
+  const textArea = `<div>
+      <textarea
+        id="newPostEluney-${doc.id}"
+        class="newPostEluney"
+        cols="30"
+        rows="10"
+        required
+      >${doc.data().postContent}
+      </textarea> 
+      <button id="submitButton"  class="submitBtn" type="submit" >Guardar</button>
+      </div>`;
   divEdit.innerHTML = textArea;
   const buttonSubmit = divEdit.querySelector("#submitButton");
   let newPostToUpdate = "";
   buttonSubmit.addEventListener("click", () => {
-    console.log("newPostToUpdate: ", newPostToUpdate);
     editPostFb(doc.id, newPostToUpdate);
-    console.log(buttonSubmit, "buttonSubmit");
+    setTimeout(() => {
+      window.location.reload();
+    }, 2 * 1000);
   });
   divEdit
     .querySelector(`#newPostEluney-${doc.id}`)
     .addEventListener("keypress", (e) => {
-      console.log("key: ", e);
       newPostToUpdate += e.key;
     });
   document.getElementById("modalPostBtn").appendChild(divEdit);
@@ -37,22 +37,24 @@ export const wall = (e) => {
   const wallHome = document.createElement("div");
   const viewWall = `
     <div class="header">
-      <div class="containerBoxGreenOne"> <img class="boxGreenOne"  src=Assets/sostenible (1).png> </div>
-        <h1>Eluney</h1>
+      <div class="containerBoxGreenOne">
+        <img class="boxGreenOne"  src="Assets/caja.png"> 
+      </div>
+        <h1 class="h1">Eluney</h1>
         <h3>No lo utilizo, te lo regalo!</h3>
-
         <button id="logOut" class="buttonLogout">Cerrar Sesión </button>
         </div>
-    
+        <button class="btnPost">
+    <a href="#/post"> Postear mensaje     
+    </a></button>
     <div class="wallContainer">
      <div class="postFull" id='postFull'></div>     
     </div>
-    <a  href="#/post"> Postear mensaje     
-    </a>
     
     `;
 
   wallHome.innerHTML = viewWall;
+
 
   // cierre de sesion
   const buttonLogOut = wallHome.querySelector("#logOut");

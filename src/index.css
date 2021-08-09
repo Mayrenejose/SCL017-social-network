@@ -140,15 +140,7 @@ h1 {
     font-size: 111%;
     margin-left: 13%;
 }
-
-.wallContainer {
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: 10% 34% 10% 39% max-content;
-    grid-template-rows: 51px 644px 61px;
-    
-} 
-    
+   
 .header {
     background-color: #398C6E;
     }
@@ -201,6 +193,36 @@ h3 {
     color: white;
     margin-top: -3%;
 }
+/* Muro */
+.wallContainer {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 10% 34% 10% 39% max-content;
+    grid-template-rows: 51px 644px 61px;
+    
+} 
+.heartIcon {
+    width: 8%;
+    height: auto;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.numberLike{
+    margin-left: -63%;
+    margin-top: 6%;
+
+}
+
+.btnPost {
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
+    height: 6vh;
+    grid-column: 1/2;
+    margin-left: 41%;
+    margin-top: 6%;
+  }
 
 .divComments {
     width: 100%;
@@ -209,6 +231,7 @@ h3 {
     padding: 0%;
     border: 2px solid white(0, 0, 0, 0.49);
     border-radius: 1%;
+    margin-top: 5%;
 }
 
 .IconoProfile {
@@ -304,12 +327,6 @@ h3 {
 }
 .openOption {display: block;}
 
-/* .cerrar {display: none;} */
-
-/* .editModal {display: block;} */
-
-
-
 /*pantalla de registro*/
 .containerSignUp {
 background-color:rgba(117, 111, 129, 0.74);
@@ -386,18 +403,75 @@ margin-right: auto;
 text-align: center;
 }
 
-.heartIcon {
-    width: 8%;
-    height: auto;
-    margin-left: 4%;
+  /* Pantalla de crear mensaje*/
+
+  .containerPost{
+      margin-top: 10%;
+  }
+
+  .queDeseasRegalar {
+    font-family: "Sofia", cursive;
+    margin-left: 30%;
+    font-size: xx-large;
+    margin-top: 4%;
+  }
+
+  .cajaHojaVerde {
+    height: 13vh;
+    width: 13vh;
+    margin-left: 45%;
+    margin-top: 10%;
+  }
+
+  .buttonPostOne {
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
     margin-top: 2%;
-}
-.numberLike{
-    margin-left: -75%;
-    margin-top: 6%;
+    margin-left: 28%;
+    width: 20%;
+    padding: 2%;
+    cursor: pointer;
+    
+  }
+  
+  .buttonCancel {
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
+    margin-left: 2vh;
+    width: 20%;
+    padding: 2%;
+    cursor: pointer;
+  }
 
-}
+  .postEluney {
+    height: 26vh;
+    width: 41%;
+    margin-left: 29%;
+    border-radius: 2vh;
+    border: dotted;
+  }
+  /* Editar publicacion */
+  .newPostEluney {
+    width: 64%;
+    height: 5vh;
+    margin-top: -15%;
+    z-index: 1;
+    margin-left: 13%;
+  }
 
+  .submitBtn{
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
+    margin-left: 25vh;
+    width: 20%;    
+    cursor: pointer;
+  }
 @media only screen and (device-width: 768px) {
     body{
         background-color:#C3DBD5;
@@ -592,6 +666,12 @@ text-align: center;
         border-radius: 4%;
     }
     
+    .windowContent{      
+        background-image:url(./Assets/burbujan.png);
+        background-size: 30px;
+        background-repeat: no-repeat;      
+    }
+    
     .IconoProfile {
         height: 10%;
         width: 15%;
@@ -671,5 +751,13 @@ text-align: center;
     .containerSignUp{
         margin-top: 148px;
     }
+    .btnPost{
+        margin-left: 35%
+    }
+
+    .containerPost{
+        margin-top: 25%;
+    }
+  
     };
 
