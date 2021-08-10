@@ -4,13 +4,14 @@ export const templatePost = () => {
 
   const divPost = document.createElement('div');
   const viewPost = `
+  
     <div class="containerPost" id="containerPost">
       <p class="queDeseasRegalar">¿Que deseas regalar?</p>
       <div id="containerTextarea">  
       <form id="formPost" method="POST">
       
-      <textarea name="postEluney" id="postEluney" class="postEluney" cols="30" rows="10" placeholder="No lo necesito, Te lo regalo!" required></textarea>
-      <input type="file" id="filePost" accept="image/png, .jpeg, .jpg, image/gif" required />
+      <textarea name="postEluney" id="postEluney" class="postEluney" cols="30" rows="10" placeholder="No lo necesito, Te lo regalo!" required></textarea> <br>
+     
     </div>
     <div class="buttonPost">
       <button class="buttonPostOne" id="publicButton" type="submit">Publicar</button>

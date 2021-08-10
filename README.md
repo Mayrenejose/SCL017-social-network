@@ -354,8 +354,11 @@ Criterios de aceptación:
 
 Definición de terminado:
 
-Se realiza prototipo de baja fidelidad. En este se bocetea la estructura general de la aplicación.
-Se realiza el prototipo de alta fidelidad (en Figma). Este muestra más fielmente la apariencia “final” de la aplicación.
+-Se realiza prototipo de baja fidelidad. En este se bocetea la estructura general de la aplicación.
+-Se realiza el prototipo de alta fidelidad (en Figma). Este muestra más fielmente la apariencia “final” de la aplicación.
+-Implementar firebase.
+-4 botones funcionando (iniciar sesion, crear cuenta, facebook y google).
+-Cuestionario para crear cuenta. -consumir los datos de google y facebook.
 
 H.U.2.-"Quiero tener la app en el móvil".
 
@@ -367,57 +370,42 @@ Definición de terminado:
 
 - Trabajar con mobile first para adaptar nuestra app primero a mobile y luego a las demás pantallas.
 
-H.U.3.- "Quiero buscar regalos, y tambien hacer post para regalar".
+H.U.3.- "Quiero acceder directamente a mis sitios favoritos dentro de la aplicacion".
 
 Criterios de aceptación:
 
-- Crear 2 categorías: buscar regalo y regalar. 
-- Crear barra de búsqueda. 
-- Postear mensajes.
+-Cada vista dentro de la aplicacion tendra un url distinto.
 
 Definición de terminado:
 
-- Los post deben guardarse en la base de datos. 
-- La barra de busqueda debe estar conectada a la base de datos de firebase.
+-Creacion de carpeta router.js. 
+-Funcion que indique que template mostrar por cada hash.
+-Crear casos de que template imprimir para cada caso de hash.
 
-H.U.4.-"Quiero acceder directamente a mis sitios favoritos dentro de la aplicacion".
+H.U.4.-"Quiero buscar regalos, y tambien hacer post para regalar".
 
 Criterios de aceptación:
 
-- Cada vista dentro de la aplicacion tendra un url distinto.
+-Postear mensajes.
+-Se debe mostrar en pantalla todas las publicaciones.
 
 Definición de terminado:
 
-- Creacion de carpeta router.js, asignar distintos hash a distintas views. 
+-Los post deben guardarse en la base de datos. 
+-Traer informacion de coleccion comments mediante metodo get() y lograr ordenar y distribuir.
 
-H.U.5.-"Quiero  tener un perfil en la aplicacion"
 
-Criterios de aceptación: 
-
-- Que exista una vista editable del perfil.
-
-Definición de terminado:
-
-- Creación de una vista de perfil que permita editar y guardar cambios. 
-
-H.U.6.- "Quiero darle like/me gusta a las publicaciones"
+H.U.5.- "Quiero darle like/me gusta a las publicaciones"
 
 Criterios de aceptación:
 
-- Es posible darle like a las aplicaciones. 
+-implementar 1 boton para cada accion.
+-Al hacer click en el icono pueda dar o quitar like.
 
 Definición de terminado:
 
-- Los like/me gusta deben guardarse en la base de datos.
-
-H.U.7.- "Quiero agregar fotografias a mis publicaciones"
-
-Criterios de aceptación:
--
-
-Definición de terminado:
-
--
+-Verificar el usuario activo ,que reconozca si este usuario ya dio like y que como dueño del post pueda editarlo y eliminarlo.
+-Guardar like en base de datos como parte de coleccion comentario.
 
 ## Prototipos. 
 

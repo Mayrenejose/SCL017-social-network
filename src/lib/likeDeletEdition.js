@@ -5,8 +5,7 @@ const db = firebase.firestore();
 export const deletePost = (id) => {
 
     db.collection('comments').doc(id).delete()
-      .then(() => {  
-          console.log('eliminado');   
+      .then(() => {             
           ;
       })
       .catch(() => {        
@@ -68,8 +67,7 @@ const EditUpdate = (id, addEdit) => {
   db.collection("comments")
     .doc(id)
     .get()
-    .then(() => {
-      console.log("cualquier cosa");
+    .then(() => {      
       const textPost = document.getElementById(`contentPost-${id}`);
       textPost.innerHTML = `<br> ${addEdit}`;
     });

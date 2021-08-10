@@ -60,6 +60,7 @@ body{
     height: 102%;
     margin-left: -16%;
     margin-top: -2%;
+    cursor: pointer;
 }
 
 .IngGoogle {
@@ -76,6 +77,7 @@ body{
     height: 102%;
     margin-left: -15%;
     margin-top: -3%;
+    cursor: pointer;
 }
 
 .ingresa {
@@ -130,7 +132,7 @@ header{
 h1 {
     font-family: 'Sofia', cursive;
     font-size: 40px;
-    margin-left: 31%;
+    margin-left: 15%;
     color: white;
 }
 
@@ -141,8 +143,11 @@ h1 {
     margin-left: 13%;
 }
    
-.header {
+.headerInit {
     background-color: #398C6E;
+    width: 100%;
+    height: auto;
+    
     }
 
     
@@ -154,17 +159,18 @@ h1 {
     }
 
 .containerBoxGreenOne{
-    width: 6%;
-    height: 14%;
+    width: 23%;
+    height: 100%;
     background-color: transparent;
     margin-top: -10%;
     margin-left: 4%;
 }
 
 .boxGreenOne{
-    width: 100%;
-    height: 100%;
-
+    width: 37%;
+    height:auto;
+    margin-top: 13%;
+    margin-left: -12%;
 }
 
 h2 {
@@ -181,9 +187,10 @@ h2 {
     background-color: chartreuse;
 }
 
-.buttonLogOut{
-    width: 100%;
-    height: 100%;
+.buttonLogout{
+    width: 25%;
+    height: 25%;
+    margin-left: 70%;
 }
 
 h3 {
@@ -208,8 +215,8 @@ h3 {
     margin-top: 2%;
 }
 .numberLike{
-    margin-left: -63%;
-    margin-top: 6%;
+    margin-left: -39%;
+    margin-top: 3%;
 
 }
 
@@ -220,7 +227,7 @@ h3 {
     font-family: "Solway", serif;
     height: 6vh;
     grid-column: 1/2;
-    margin-left: 41%;
+    margin-left: 35%;
     margin-top: 6%;
   }
 
@@ -330,10 +337,11 @@ h3 {
 /*pantalla de registro*/
 .containerSignUp {
 background-color:rgba(117, 111, 129, 0.74);
-width: 55%;
+width: 43%;
 height: 80%;
 margin-left: auto;
 margin-right: auto;
+margin-top: -1%;
 }
 
 .imgSign {
@@ -406,12 +414,12 @@ text-align: center;
   /* Pantalla de crear mensaje*/
 
   .containerPost{
-      margin-top: 10%;
+      margin-top: 5%;
   }
 
   .queDeseasRegalar {
     font-family: "Sofia", cursive;
-    margin-left: 30%;
+    margin-left: 36%;
     font-size: xx-large;
     margin-top: 4%;
   }
@@ -420,7 +428,7 @@ text-align: center;
     height: 13vh;
     width: 13vh;
     margin-left: 45%;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   .buttonPostOne {
@@ -428,10 +436,11 @@ text-align: center;
     border: 2px solid #398c6e;
     background-color: #87bfb1;
     font-family: "Solway", serif;
+    font-size: 100%;
     margin-top: 2%;
     margin-left: 28%;
     width: 20%;
-    padding: 2%;
+    padding: 1%;
     cursor: pointer;
     
   }
@@ -441,9 +450,10 @@ text-align: center;
     border: 2px solid #398c6e;
     background-color: #87bfb1;
     font-family: "Solway", serif;
+    font-size: 100%;
     margin-left: 2vh;
     width: 20%;
-    padding: 2%;
+    padding: 1%;
     cursor: pointer;
   }
 
@@ -587,7 +597,7 @@ text-align: center;
     h1 {
         font-family: 'Sofia', cursive;
         font-size: 40px;
-        margin-left: 36%;
+        margin-left: 17%;
         color: white;
     }
     
@@ -604,6 +614,12 @@ text-align: center;
         grid-template-columns: 12% 37% 10% 30% max-content;
         grid-template-rows: 73px 613px 135px;
     }
+
+    .numberLike{
+        margin-left: -75%;
+        margin-top: 5%;
+    
+    }
         
     .header {
         background-color: #398C6E;
@@ -616,19 +632,19 @@ text-align: center;
          grid-row: 2/2;
         }
     
-    .containerBoxGreenOne{
+    .containerBoxGreenOne {
         width: 6%;
         height: 14%;
         background-color: transparent;
         margin-top: -10%;
         margin-left: 4%;
-    }
-    
-    .boxGreenOne{
-        width: 100%;
+        }
+          
+    .boxGreenOne {
+        width: 115%;
         height: 100%;
-    
-    }
+        margin-top: 1vh;
+        }
     
     h2 {
         font-family: 'Sofia', cursive;
@@ -728,7 +744,11 @@ text-align: center;
         position: relative;
         display: inline-block;
       }   
-    
+
+      .queDeseasRegalar {        
+        margin-left: 29%;       
+      }
+
     .windowContent{
         display: none;
         position: absolute;
