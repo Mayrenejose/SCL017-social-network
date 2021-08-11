@@ -417,13 +417,14 @@ La primera tarea fue identificar los elementos que debían estar presentes en nu
 
 ![img](src/Assets/bajafide3.jpeg)
 
-
+## Prototipos de alta fidelidad: 
 
 A continuación, le dimos colores suaves y una tipografía manuscrita, pero que fuese legible a la vez, a cada una de nuestras vistas. Corresponde a nuestro prototipo de alta fidelidad.
 
 ![img](src/Assets/altafide1.jpeg)
 
-
+## Test de usabilidad:
+[![Alt text](https://img.youtube.com/vi/rnqMX6t8h2I/0.jpg)](https://www.youtube.com/watch?v=rnqMX6t8h2I) 
 
 
 
