@@ -42,7 +42,7 @@ export const wall = (e) => {
     if (user) {   
       userPhoto = user.photoURL;
       if (user.photoURL === null) {             //solo toma foto de usuario cuando accede con google o facebook
-        userPhoto = '../Assets/user.png';      //foto de usuario por defecto
+        userPhoto = '..../Assets/user.png';      //foto de usuario por defecto
     }
       userName = user.displayName;       
     
@@ -53,7 +53,7 @@ export const wall = (e) => {
     <div class="headerInit">      
         <h1 class="nameEluney">Eluney</h1> <br> 
         <div class="containerBoxGreenOne">
-        <img class="boxGreenOne"  src="../Assets/sostenible (1).png"> 
+        <img class="boxGreenOne"  src="..../Assets/sostenible (1).png"> 
       </div>
       <h3>No lo utilizo, te lo regalo!</h3>
       <img class="photoHome" src="${userPhoto}" alt="photoUser"> 
@@ -77,8 +77,7 @@ export const wall = (e) => {
   const buttonLogOut = wallHome.querySelector("#logOut");
   buttonLogOut.addEventListener("click", () => {
   const confirmationLogOut = confirm("¿Estas seguro de cerrar sesion?");
-  if (confirmationLogOut === true) {
-    console.log('cerrando sesion');
+  if (confirmationLogOut === true) {    
    logOut();
   }
   });

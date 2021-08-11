@@ -1,7 +1,6 @@
 var provider = new firebase.auth.GoogleAuthProvider();
 
-export const inicioSesionGoogle = () => {
-  console.log("inicioSesionGoogle");
+export const inicioSesionGoogle = () => {  
   return firebase
     .auth()
     .signInWithPopup(provider)
