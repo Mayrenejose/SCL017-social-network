@@ -407,21 +407,21 @@ Definición de terminado:
 -Verificar el usuario activo ,que reconozca si este usuario ya dio like y que como dueño del post pueda editarlo y eliminarlo.
 -Guardar like en base de datos como parte de coleccion comentario.
 
-## Prototipos. 
+## Prototipos de baja fidelidad: 
 
 La primera tarea fue identificar los elementos que debían estar presentes en nuestra aplicación, por lo tanto, las imagenes iniciales corresponden a la visualización de lo necesario para ser creado en HTML. Es nuestro prototipo de baja fidelidad. 
 
-![](src/Assets/1.jpeg)
+![img](src/Assets/bajafide1.jpeg)
 
-![](src/Assets/2.jpeg)
+![img](src/Assets/bajafide2.jpeg)
 
-![](src/Assets/3.jpeg)
+![img](src/Assets/bajafide3.jpeg)
 
 
 
 A continuación, le dimos colores suaves y una tipografía manuscrita, pero que fuese legible a la vez, a cada una de nuestras vistas. Corresponde a nuestro prototipo de alta fidelidad.
 
-/*Insertar imágenes*/
+![img](src/Assets/altafide1.jpeg)
 
 
 

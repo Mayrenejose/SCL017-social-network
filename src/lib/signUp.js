@@ -25,8 +25,8 @@ export const createUser = (nickSignUp,emailSignUp,passwordSignUp) =>{
 
       user.sendEmailVerification();
       alert('Revisa la bandeja de entrada de tu correo electronico');
-      window.location.href = '#/Registrate';
-      cleanFormSignUp();
+      window.location.href = '#/';
+      //cleanFormSignUp();
       
     })
     .catch((error) => {

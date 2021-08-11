@@ -9,14 +9,13 @@ export const createPost = () => {
     const userName = userPost.displayName;
     const userEmail = userPost.email;
     
-    if (userPost === null) {    
-        console.log(userName);            //si no encuentra el nombre de usuario usa el email
+    if (userPost === null) {     //si no encuentra el nombre de usuario usa el email    
         userName = userPost.email;
     }
 
     let photoUser = userPost.photoURL;  //foto de usuario
     if (userPost.photoURL === null) {    //solo toma foto de usuario cuando accede con google o facebook
-        photoUser = '../Assets/user.jpg';  //foto de usuario por defecto
+        photoUser = '../Assets/user.png';  //foto de usuario por defecto
     }
     
     //agregar comentario a firestore

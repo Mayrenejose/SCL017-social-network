@@ -41,25 +41,23 @@ export const wall = (e) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {   
       userPhoto = user.photoURL;
-      userName = user.displayName;  
-
-      
+      if (user.photoURL === null) {             //solo toma foto de usuario cuando accede con google o facebook
+        userPhoto = '../Assets/user.png';      //foto de usuario por defecto
+    }
+      userName = user.displayName;       
     
     } else {  
-
-    }
-  
-  console.log(userPhoto); 
-  console.log(userName);  
-//});
+    } 
+ 
   const viewWall = `
-    <div class="headerInit">
-      
-        <h1 class="h1">Eluney</h1> <br> 
+    <div class="headerInit">      
+        <h1 class="nameEluney">Eluney</h1> <br> 
         <div class="containerBoxGreenOne">
         <img class="boxGreenOne"  src="../Assets/sostenible (1).png"> 
       </div>
       <h3>No lo utilizo, te lo regalo!</h3>
+      <img class="photoHome" src="${userPhoto}" alt="photoUser"> 
+      <p class="nameHome">${userName}</p> 
         <button id="logOut" class="buttonLogout">Cerrar Sesión </button>
         </div>
         <button class="btnPost">
@@ -80,7 +78,8 @@ export const wall = (e) => {
   buttonLogOut.addEventListener("click", () => {
   const confirmationLogOut = confirm("¿Estas seguro de cerrar sesion?");
   if (confirmationLogOut === true) {
-   logOut;
+    console.log('cerrando sesion');
+   logOut();
   }
   });
 

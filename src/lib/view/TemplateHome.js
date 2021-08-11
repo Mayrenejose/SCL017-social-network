@@ -21,12 +21,13 @@ export const home = () => {
           <input class="inputHome" id="password" spellcheck="false" placeholder="Ingrese contraseña" type="password" name="text">
           
           <button id="ingresar" class="ingresa"> Ingresar </button>
+
+          <p class="goRegistre">¿Aun no te registras? <a href="#/Registrate">Ingresa Aqui</a></p>
+
           <p class="o">--------- o ----------</p>                    
           <button id="facebook" class="IngFacebook"><img class="iconFacebook" src="Assets/facebook.png"></button>
                     
           <button id="google" class="IngGoogle"><img class="iconGoogle" src="Assets/google-mas.png"></button>
-
-          <p class="goRegistre">¿Aun no te registras? <a href="#/Registrate">Ingresa Aqui</a></p>
 
           
       </div>

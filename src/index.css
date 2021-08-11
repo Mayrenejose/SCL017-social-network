@@ -68,7 +68,7 @@ body{
     height: 10%;
     background-color: transparent;
     border-radius: 50%;
-    margin-top: 9%;
+    margin-top: -2%;
     margin-left: 17%;
 }
 
@@ -105,6 +105,7 @@ body{
     text-align: center;
     font-family: 'Solway', serif;
     font-size: 88%;
+    margin-top: 10%;
 }
 .inputHome {
     width: 93%;
@@ -132,8 +133,15 @@ header{
 h1 {
     font-family: 'Sofia', cursive;
     font-size: 40px;
-    margin-left: 15%;
+    margin-left: 25%;
     color: white;
+}
+
+.nameEluney{
+    font-family: 'Sofia', cursive;
+    font-size: 40px;
+    margin-left: 15%;
+    color: white; 
 }
 
 .slogan {
@@ -188,10 +196,28 @@ h2 {
 }
 
 .buttonLogout{
-    width: 25%;
+    width: 15%;
     height: 25%;
-    margin-left: 70%;
+    font-family: 'Sofia', cursive;
+    font-size: medium;
+    color: white;
+    cursor: pointer;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin-left: 84%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-image: linear-gradient(135deg, #00c7c5 0%, #0088d7 100%);
+    border-color: whitesmoke;
+    /* margin-top: 10%; */
 }
+
+.buttonLogout:hover{
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
 
 h3 {
     font-family: 'Solway', serif;
@@ -200,12 +226,28 @@ h3 {
     color: white;
     margin-top: -3%;
 }
+.photoHome{
+    height:80px;
+    width: 80px; 
+    border-radius: 50%;  
+    margin-top: -17%;
+    margin-left: 39%;
+    
+}
+.nameHome{
+    font-family: 'Solway', serif;
+    font-size: 16px;
+    margin-top: -4%;
+    margin-left: 47%;
+    
+}
+
 /* Muro */
 .wallContainer {
     background-color: transparent;
     display: grid;
     grid-template-columns: 10% 34% 10% 39% max-content;
-    grid-template-rows: 51px 644px 61px;
+    grid-template-rows: 51px 766px 61px;
     
 } 
 .heartIcon {
@@ -284,7 +326,7 @@ h3 {
     display: flex;
     width: 90%;
     height: 30%;
-    margin-left: 5%;
+    margin-left: 5%;    
 }
 .likesId{
     display: flex;
@@ -597,7 +639,7 @@ text-align: center;
     h1 {
         font-family: 'Sofia', cursive;
         font-size: 40px;
-        margin-left: 17%;
+        margin-left: 26%;
         color: white;
     }
     
@@ -612,7 +654,7 @@ text-align: center;
         background-color: #C3DBD5;
         display: grid;
         grid-template-columns: 12% 37% 10% 30% max-content;
-        grid-template-rows: 73px 613px 135px;
+        grid-template-rows: 73px 787px 135px;
     }
 
     .numberLike{
@@ -777,6 +819,10 @@ text-align: center;
 
     .containerPost{
         margin-top: 25%;
+    }
+
+    .nameHome {       
+        margin-left: 50%;
     }
   
     };
