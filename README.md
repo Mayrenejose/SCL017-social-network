@@ -431,10 +431,24 @@ A continuacion se presenta la grabacion del test de usabilidad realizado a un us
 
 El feedbaak obtenido fue el siguiente:
 
+-El primer feedbaak recibido fue que el link para ir a registrarse no estaba de facil acceso, que podriamos colocarlo debajo de iniciar sesion para que su ubicacion fuera mucho mas facil.
+
 ![img](src/Assets/johana1.jpeg)
+
+-El segundo feedbaak fue que al completar el registro la aplicacion limpiaba los inputs y se quedaba en la misma vista, que seria mejor si automaticamente re-dirigiera al home para iniciar sesion, a pesar de tener un footer con el lik para ir al home.
+
 ![img](src/Assets/johana2.jpeg)
+
+-Al momento de editar los post, si el usuario solo queria editar alguna letro palabra tendria que escribir todo de nuevo, este fue el tercer feedbaak recibido y mejora a realizar.
+
 ![img](src/Assets/johana3.jpeg)
+
+-Por ultimo se nos pidio colocar una foto de usuario por defecto, ya que los usuarios que se registran con contraseña y email no tenia de donde firebase obtener su fotografia.
 ![img](src/Assets/johana4.jpeg)
+
+Visita Eluney en el siguiente link :
+
+https://mayrenejose.github.io/SCL017-social-network/src/
 
 
 
