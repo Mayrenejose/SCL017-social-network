@@ -424,7 +424,17 @@ A continuación, le dimos colores suaves y una tipografía manuscrita, pero que 
 ![img](src/Assets/altafide1.jpeg)
 
 ## Test de usabilidad:
+
+A continuacion se presenta la grabacion del test de usabilidad realizado a un usuario:
+
 [![Alt text](https://img.youtube.com/vi/rnqMX6t8h2I/0.jpg)](https://www.youtube.com/watch?v=rnqMX6t8h2I) 
+
+El feedbaak obtenido fue el siguiente:
+
+![img](src/Assets/johana1.jpeg)
+![img](src/Assets/johana2.jpeg)
+![img](src/Assets/johana3.jpeg)
+![img](src/Assets/johana4.jpeg)
 
 
 
