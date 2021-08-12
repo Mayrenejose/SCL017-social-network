@@ -1,0 +1,829 @@
+body{
+    background-color:#C3DBD5;
+    z-index: 1;
+    overflow-y: scroll;
+}
+/* Home */
+.containerGeneral{
+    width: 100%;
+    height: 1000px;
+}
+
+.containerIconGift {
+    background-color: #9CB795;
+    width: 80%;
+    height: 27%;
+    margin-top: 15%;
+    margin-left: 10%;
+    z-index: 2;
+}
+
+.imgGift {
+    width: 30%;
+    height: 99%;
+    margin-left: 57%;
+}
+
+.containerLogin {
+    background: rgba(117, 111, 129, 0.74);
+    width: 25%;
+    z-index: 3;
+    margin-top: -28%;
+    margin-left: 21%;
+    height: 52%;
+}
+
+.containerBoxGreen {
+    width: 24%;
+    height: 14%;
+    background-color: transparent;
+    margin-top: -1%;
+    margin-left: 36%;
+}
+.boxGreen{
+    width: 100%;
+    height: 100%;
+
+}
+
+.IngFacebook {
+    width: 17%;
+    height: 10%;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+.iconFacebook {
+    width: 132%;
+    height: 102%;
+    margin-left: -16%;
+    margin-top: -2%;
+    cursor: pointer;
+}
+
+.IngGoogle {
+    width: 17%;
+    height: 10%;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-top: -2%;
+    margin-left: 17%;
+}
+
+.iconGoogle {
+    width: 132%;
+    height: 102%;
+    margin-left: -15%;
+    margin-top: -3%;
+    cursor: pointer;
+}
+
+.ingresa {
+    height: 9%;
+    width: 34%;
+    margin-left: 32%;
+    margin-top: 6%;
+    font-family: 'Solway', serif;
+    font-size: 95%;
+    border: none;
+    border-radius: 15px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.ingresa:hover{
+    background-color: #9CB795;;
+}
+
+.o{
+    text-align: center;
+}
+
+.goRegistre{
+    text-align: center;
+    font-family: 'Solway', serif;
+    font-size: 88%;
+    margin-top: 10%;
+}
+.inputHome {
+    width: 93%;
+    height: 5%;
+    background-color: rgb(246 246 246);
+    font-family: 'Solway', serif;
+    margin-left: 2%;
+    margin-top: 10%;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+button{
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+    font-family: 'Solway', serif, #fff;
+
+}
+
+header{
+    font-family: 'Sofia', cursive;
+}
+
+h1 {
+    font-family: 'Sofia', cursive;
+    font-size: 40px;
+    margin-left: 25%;
+    color: white;
+}
+
+.nameEluney{
+    font-family: 'Sofia', cursive;
+    font-size: 40px;
+    margin-left: 15%;
+    color: white; 
+}
+
+.slogan {
+    font-family: 'Solway', serif;
+    margin-top: -8%;
+    font-size: 111%;
+    margin-left: 13%;
+}
+   
+.headerInit {
+    background-color: #398C6E;
+    width: 100%;
+    height: auto;
+    
+    }
+
+    
+.postFull {
+    background-color: transparent;
+    grid-column: 2/5;
+    grid-row: 2/2;
+    
+    }
+
+.containerBoxGreenOne{
+    width: 23%;
+    height: 100%;
+    background-color: transparent;
+    margin-top: -10%;
+    margin-left: 4%;
+}
+
+.boxGreenOne{
+    width: 37%;
+    height:auto;
+    margin-top: 13%;
+    margin-left: -12%;
+}
+
+h2 {
+    font-family: 'Sofia', cursive;
+    font-size: 33px;
+    margin-left: 13%;
+    color: white;
+}
+.containerButton {
+    width: 30%;
+    height: 15%;
+    margin-left: 46%;
+    margin-top: 1%;
+    background-color: chartreuse;
+}
+
+.buttonLogout{
+    width: 15%;
+    height: 25%;
+    font-family: 'Sofia', cursive;
+    font-size: medium;
+    color: white;
+    cursor: pointer;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    margin-left: 84%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-image: linear-gradient(135deg, #00c7c5 0%, #0088d7 100%);
+    border-color: whitesmoke;
+    /* margin-top: 10%; */
+}
+
+.buttonLogout:hover{
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+
+h3 {
+    font-family: 'Solway', serif;
+    font-size: 14px;
+    margin-left: 13%;
+    color: white;
+    margin-top: -3%;
+}
+.photoHome{
+    height:80px;
+    width: 80px; 
+    border-radius: 50%;  
+    margin-top: -17%;
+    margin-left: 39%;
+    
+}
+.nameHome{
+    font-family: 'Solway', serif;
+    font-size: 16px;
+    margin-top: -4%;
+    margin-left: 47%;
+    
+}
+
+/* Muro */
+.wallContainer {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 10% 34% 10% 39% max-content;
+    grid-template-rows: 51px 766px 61px;
+    
+} 
+.heartIcon {
+    width: 8%;
+    height: auto;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.numberLike{
+    margin-left: -39%;
+    margin-top: 3%;
+
+}
+
+.btnPost {
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
+    height: 6vh;
+    grid-column: 1/2;
+    margin-left: 35%;
+    margin-top: 6%;
+  }
+
+.divComments {
+    width: 100%;
+    height: 35%;
+    background-color: white;
+    padding: 0%;
+    border: 2px solid white(0, 0, 0, 0.49);
+    border-radius: 1%;
+    margin-top: 5%;
+}
+
+.IconoProfile {
+    height: 10%;
+    width: 15%;
+    margin-left: 85%;
+}
+   
+.Bar {
+    height:30px;
+    width: 30px;    
+}
+
+.idPost{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d9e4d7; 
+}
+
+.photoId{
+    height:80px;
+    width: 80px; 
+    border-radius: 50%;  
+    margin-top: 1%;
+    margin-left: 3%;
+    
+}
+.nameId{
+    font-family: 'Solway', serif;
+    font-size: 16px;
+    margin-top: 4%;
+    margin-left: 1%;
+    
+}
+
+.dateId{
+    font-family:  'Solway', serif;
+    font-size: 13px;
+    margin-top: 5%;
+    margin-left: 9%;
+}
+.postId {
+    display: flex;
+    width: 90%;
+    height: 30%;
+    margin-left: 5%;    
+}
+.likesId{
+    display: flex;
+}
+.commentId{
+    display: flex;
+}
+.comentarPost{
+    width: 9%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 3%;
+    cursor: pointer;
+}
+.option {
+    width:5%;
+    margin-top: 3%;
+    margin-left: 91%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    cursor: pointer;
+  }
+  
+  .option:hover, .option:focus {
+    background-color: #C4CDC2;
+  }
+  
+  .pointThree {
+    position: relative;
+    display: inline-block;
+  }   
+
+.windowContent{
+    display: none;
+    position: absolute;
+    left: 75%;
+    top: 32%;
+    background-image:url(./Assets/burbujan.png);
+    background-size: 67px;
+    background-repeat: no-repeat;
+    min-width: 85px;
+    height: 78px;
+    z-index: 1;
+    cursor: pointer;
+    font-family: 'Solway', serif;
+}
+.openOption {display: block;}
+
+/*pantalla de registro*/
+.containerSignUp {
+background-color:rgba(117, 111, 129, 0.74);
+width: 43%;
+height: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: -1%;
+}
+
+.imgSign {
+    width: 24%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: -2%;
+}
+
+.pointSignUp {
+    width: 70%;
+    height: 5%;
+    background-color: rgb(246 246 246);
+    font-family: 'Solway', serif;
+    margin-left: 13%;
+    margin-top: 1vh;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+
+.fnick {
+    font-family: 'Solway', serif;
+    color: black;
+    font-size: 15px;
+    margin-left: 14%;
+    margin-top: 42vh;
+}
+
+.singUpForm {
+    height: 50%;
+    width: 100%;
+    margin-top: 7%;
+}
+.buttonSignUp{
+    display: block;
+    margin: auto;
+    font-family: 'Solway', serif;
+    color: black;
+    padding: 3%;
+    border: none;
+    border-radius: 15px;
+    font-size: 95%;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.buttonSignUp:hover{
+    background-color: #C3DBD5;
+}
+
+.footerSignUp{
+    background-color:rgba(117, 111, 129, 0.74);
+    font-family: 'Solway', serif;
+    font-size: 100%;
+    width: 100%;
+    height: 20%;
+    color: white;
+    cursor: pointer;       
+}
+
+.texSignUp{
+text-align: center;
+}
+
+  /* Pantalla de crear mensaje*/
+
+  .containerPost{
+      margin-top: 5%;
+  }
+
+  .queDeseasRegalar {
+    font-family: "Sofia", cursive;
+    margin-left: 36%;
+    font-size: xx-large;
+    margin-top: 4%;
+  }
+
+  .cajaHojaVerde {
+    height: 13vh;
+    width: 13vh;
+    margin-left: 45%;
+    margin-top: 5%;
+  }
+
+  .buttonPostOne {
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
+    font-size: 100%;
+    margin-top: 2%;
+    margin-left: 28%;
+    width: 20%;
+    padding: 1%;
+    cursor: pointer;
+    
+  }
+  
+  .buttonCancel {
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
+    font-size: 100%;
+    margin-left: 2vh;
+    width: 20%;
+    padding: 1%;
+    cursor: pointer;
+  }
+
+  .postEluney {
+    height: 26vh;
+    width: 41%;
+    margin-left: 29%;
+    border-radius: 2vh;
+    border: dotted;
+  }
+  /* Editar publicacion */
+  .newPostEluney {
+    width: 64%;
+    height: 5vh;
+    margin-top: -15%;
+    z-index: 1;
+    margin-left: 13%;
+  }
+
+  .submitBtn{
+    border-radius: 6px;
+    border: 2px solid #398c6e;
+    background-color: #87bfb1;
+    font-family: "Solway", serif;
+    margin-left: 25vh;
+    width: 20%;    
+    cursor: pointer;
+  }
+@media only screen and (device-width: 768px) {
+    body{
+        background-color:#C3DBD5;
+        z-index: 1;
+        overflow-y: scroll;
+    }
+    .containerGeneral{
+        width: 100%;
+        height: 1000px;
+    }
+    
+    .containerIconGift {
+        background-color: #9CB795;
+        width: 92%;
+        height: 27%;
+        margin-top: 37%;
+        margin-left: 4%;
+        z-index: 2;
+    }
+    
+    .imgGift {
+        width: 39%;
+        height: 99%;
+        margin-left: 57%;
+    }
+    
+    .containerLogin {
+        background: rgba(117, 111, 129, 0.74);
+        width: 40%;
+        z-index: 3;
+        margin-top: -54%;
+        margin-left: 9%;
+        height: 59%;
+        
+    }
+    
+    .containerBoxGreen {
+        width: 24%;
+        height: 14%;
+        background-color: transparent;
+        margin-top: -1%;
+        margin-left: 36%;
+    }
+    .boxGreen{
+        width: 100%;
+        height: 100%;
+    
+    }
+    
+    .IngFacebook {
+        width: 17%;
+        height: 10%;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-left: 26%;
+    }
+    
+    .iconFacebook {
+        width: 132%;
+        height: 102%;
+        margin-left: -16%;
+        margin-top: -2%;
+    }
+    
+    .IngGoogle {
+        width: 17%;
+        height: 10%;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-top: 9%;
+        margin-left: 17%;
+    }
+    
+    .iconGoogle {
+        width: 132%;
+        height: 102%;
+        margin-left: -15%;
+        margin-top: -3%;
+    }
+    
+    .ingresa {
+        height: 12%;
+        width: 35%;
+        margin-left: 32%;
+        margin-top: 6%;
+    }
+    
+    .Registro {
+        height: 12%;
+        width: 35%;
+        margin-left: 13%;
+    }
+    input {
+        width: 93%;
+        height: 5%;
+        background-color: rgb(246 246 246);
+        font-family: 'Solway', serif;
+        margin-left: 2%;
+        margin-top: 10%;
+    }
+    button{
+        width: 30%;
+        height: 30%;
+        border-radius: 10%;
+        font-family: 'Solway', serif, #fff;
+    
+    }
+    
+    header{
+        font-family: 'Sofia', cursive;
+    }
+    
+    h1 {
+        font-family: 'Sofia', cursive;
+        font-size: 40px;
+        margin-left: 26%;
+        color: white;
+    }
+    
+    .slogan {
+        font-family: 'Solway', serif;
+        margin-top: -8%;
+        font-size: 111%;
+        margin-left: 13%;
+    }
+    
+    .wallContainer {
+        background-color: #C3DBD5;
+        display: grid;
+        grid-template-columns: 12% 37% 10% 30% max-content;
+        grid-template-rows: 73px 787px 135px;
+    }
+
+    .numberLike{
+        margin-left: -75%;
+        margin-top: 5%;
+    
+    }
+        
+    .header {
+        background-color: #398C6E;
+        }
+    
+        
+    .postFull {
+        background-color: transparent;
+        grid-column: 2/5;
+         grid-row: 2/2;
+        }
+    
+    .containerBoxGreenOne {
+        width: 6%;
+        height: 14%;
+        background-color: transparent;
+        margin-top: -10%;
+        margin-left: 4%;
+        }
+          
+    .boxGreenOne {
+        width: 115%;
+        height: 100%;
+        margin-top: 1vh;
+        }
+    
+    h2 {
+        font-family: 'Sofia', cursive;
+        font-size: 33px;
+        margin-left: 13%;
+        color: white;
+    }
+    .containerButton {
+        width: 30%;
+        height: 15%;
+        margin-left: 46%;
+        margin-top: 1%;
+        background-color: chartreuse;
+    }
+    
+    .buttonLogOut{
+        width: 100%;
+        height: 100%;
+    }
+    
+    h3 {
+        font-family: 'Solway', serif;
+        font-size: 14px;
+        margin-left: 13%;
+        color: white;
+        margin-top: -3%;
+    }
+    
+    .divComments {
+        width: 100%;
+        height: 35%;
+        background-color:white;
+        padding: 0%;
+        border: none;
+        border-radius: 4%;
+    }
+    
+    .windowContent{      
+        background-image:url(./Assets/burbujan.png);
+        background-size: 30px;
+        background-repeat: no-repeat;      
+    }
+    
+    .IconoProfile {
+        height: 10%;
+        width: 15%;
+        margin-left: 85%;
+    }
+       
+    .Bar {
+        height:30px;
+        width: 30px;    
+    }
+    
+    .idPost{
+        display: flex;
+        justify-content: space-around;
+            
+    }
+    
+    .photoId{
+        height:80px;
+        width: 80px; 
+        border-radius: 50%;  
+    }
+       
+    .postId {
+        display: flex;
+        
+        width: 90%;
+        height: 30%;
+        margin-left: 5%;
+    }
+    .likesId{
+        display: flex;
+    }
+    .commentId{
+        display: flex;
+    }
+    .comentarPost{
+        width: 9%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+        margin-left: 3%;
+        cursor: pointer;
+    }
+    .option {
+        width:4%;
+      }
+      
+      .option:hover, .option:focus {
+        background-color: #C4CDC2;
+      }
+      
+      .pointThree {
+        position: relative;
+        display: inline-block;
+      }   
+
+      .queDeseasRegalar {        
+        margin-left: 29%;       
+      }
+
+    .windowContent{
+        display: none;
+        position: absolute;
+        left: 75%;
+        top: 32%;
+        background-image:url(./Assets/burbuja.png);
+        background-size: 67px;
+        background-repeat: no-repeat;
+        min-width: 85px;
+        height: 78px;
+        overflow: auto;
+        z-index: 1;
+    }
+    .openOption {display: block;
+    }
+    .texSignUp{
+        margin-top: 119px;
+        }
+
+    .containerSignUp{
+        margin-top: 148px;
+    }
+    .btnPost{
+        margin-left: 35%
+    }
+
+    .containerPost{
+        margin-top: 25%;
+    }
+
+    .nameHome {       
+        margin-left: 50%;
+    }
+  
+    };
+
