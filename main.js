@@ -1,7 +1,7 @@
 import { changeRouter } from './lib/router.js';
 
 const init = () => {
-  console.log('main');
+  
   changeRouter(window.location.hash);
   
   //document.getElementById('root').appendChild(home());     //antes de haber cambios en hash siempre tener el home
